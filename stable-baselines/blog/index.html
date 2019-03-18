@@ -1,0 +1,1555 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>stable-baselines - Donkey Car</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#stable-baselinesopenai-base-line-" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Donkey Car" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Donkey Car
+            </span>
+            <span class="md-header-nav__topic">
+              stable-baselines
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Donkey Car" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Donkey Car
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guide/build_hardware/" title="Build a car." class="md-nav__link">
+      Build a car.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guide/install_software/" title="Install the software" class="md-nav__link">
+      Install the software
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guide/get_driving/" title="Get driving." class="md-nav__link">
+      Get driving.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guide/calibrate/" title="Calibrate steering and throttle." class="md-nav__link">
+      Calibrate steering and throttle.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guide/train_autopilot/" title="Train an autopilot." class="md-nav__link">
+      Train an autopilot.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guide/simulator/" title="Donkey Simulator." class="md-nav__link">
+      Donkey Simulator.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Parts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Parts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/actuators/" title="Actuators" class="md-nav__link">
+      Actuators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/controllers/" title="Controllers" class="md-nav__link">
+      Controllers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/stores/" title="Stores" class="md-nav__link">
+      Stores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/imu/" title="IMU" class="md-nav__link">
+      IMU
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Utilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utility/donkey/" title="donkey" class="md-nav__link">
+      donkey
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      References
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        stable-baselines
+      </label>
+    
+    <a href="./" title="stable-baselines" class="md-nav__link md-nav__link--active">
+      stable-baselines
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scikit-learn" title="統一された構造（scikit-learnのようなインターフェイス）とドキュメンテーションによる単一のコードスタイル" class="md-nav__link">
+    統一された構造（scikit-learnのようなインターフェイス）とドキュメンテーションによる単一のコードスタイル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="フォークの歴史" class="md-nav__link">
+    フォークの歴史
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="どんなアルゴリズムが含まれていますか？" class="md-nav__link">
+    どんなアルゴリズムが含まれていますか？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="新着情報?" class="md-nav__link">
+    新着情報?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="ユニファイドインターフェイス" class="md-nav__link">
+    ユニファイドインターフェイス
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="ロード、セーブ、ムーブのサポート" class="md-nav__link">
+    ロード、セーブ、ムーブのサポート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="あらゆる種類のフィーチャのトレーニング" class="md-nav__link">
+    あらゆる種類のフィーチャのトレーニング
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="より多くのテストとカバレッジ" class="md-nav__link">
+    より多くのテストとカバレッジ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="バグ修正" class="md-nav__link">
+    バグ修正
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="サンプル：「話はもういいから、コードで教えて」" class="md-nav__link">
+    サンプル：「話はもういいから、コードで教えて」
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-colab-notebook" title="Google Colab notebookリスト" class="md-nav__link">
+    Google Colab notebookリスト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="基本的な使い方：トレーニング、セーブ、ロード" class="md-nav__link">
+    基本的な使い方：トレーニング、セーブ、ロード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="マルチプロセッシング：ベクトル化された環境のパワーを解き放つ" class="md-nav__link">
+    マルチプロセッシング：ベクトル化された環境のパワーを解き放つ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboard" title="Tensorboard によるトレーニングの監視" class="md-nav__link">
+    Tensorboard によるトレーニングの監視
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="コールバックの使用：トレーニングの監視" class="md-nav__link">
+    コールバックの使用：トレーニングの監視
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="アタリゲームズ" class="md-nav__link">
+    アタリゲームズ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mujoco" title="Mujoco：入力フィーチャの正規化" class="md-nav__link">
+    Mujoco：入力フィーチャの正規化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="レトロソニック" class="md-nav__link">
+    レトロソニック
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="カスタム方策ネットワーク" class="md-nav__link">
+    カスタム方策ネットワーク
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="ボーナス：継続的トレーニング" class="md-nav__link">
+    ボーナス：継続的トレーニング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="結論" class="md-nav__link">
+    結論
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="謝辞" class="md-nav__link">
+    謝辞
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="著者について" class="md-nav__link">
+    著者について
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-colab-notebook_1" title="Google Colab notebook リスト" class="md-nav__link">
+    Google Colab notebook リスト
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sixaxis/" title="sixaxis" class="md-nav__link">
+      sixaxis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wii-u/" title="Wii-U" class="md-nav__link">
+      Wii-U
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../paper/Learn_to_Drive_in_a_Day.md" title="Learn to drive in a Day" class="md-nav__link">
+      Learn to drive in a Day
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release2.5.8/" title="ver2.5.8" class="md-nav__link">
+      ver2.5.8
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../supported_cars/" title="Supported Cars" class="md-nav__link">
+      Supported Cars
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../roll_your_own/" title="Roll Your Own" class="md-nav__link">
+      Roll Your Own
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contribute/" title="Contribute" class="md-nav__link">
+      Contribute
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tests/" title="Tests" class="md-nav__link">
+      Tests
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../release/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scikit-learn" title="統一された構造（scikit-learnのようなインターフェイス）とドキュメンテーションによる単一のコードスタイル" class="md-nav__link">
+    統一された構造（scikit-learnのようなインターフェイス）とドキュメンテーションによる単一のコードスタイル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="フォークの歴史" class="md-nav__link">
+    フォークの歴史
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="どんなアルゴリズムが含まれていますか？" class="md-nav__link">
+    どんなアルゴリズムが含まれていますか？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="新着情報?" class="md-nav__link">
+    新着情報?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="ユニファイドインターフェイス" class="md-nav__link">
+    ユニファイドインターフェイス
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="ロード、セーブ、ムーブのサポート" class="md-nav__link">
+    ロード、セーブ、ムーブのサポート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="あらゆる種類のフィーチャのトレーニング" class="md-nav__link">
+    あらゆる種類のフィーチャのトレーニング
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="より多くのテストとカバレッジ" class="md-nav__link">
+    より多くのテストとカバレッジ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="バグ修正" class="md-nav__link">
+    バグ修正
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="サンプル：「話はもういいから、コードで教えて」" class="md-nav__link">
+    サンプル：「話はもういいから、コードで教えて」
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-colab-notebook" title="Google Colab notebookリスト" class="md-nav__link">
+    Google Colab notebookリスト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="基本的な使い方：トレーニング、セーブ、ロード" class="md-nav__link">
+    基本的な使い方：トレーニング、セーブ、ロード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="マルチプロセッシング：ベクトル化された環境のパワーを解き放つ" class="md-nav__link">
+    マルチプロセッシング：ベクトル化された環境のパワーを解き放つ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tensorboard" title="Tensorboard によるトレーニングの監視" class="md-nav__link">
+    Tensorboard によるトレーニングの監視
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="コールバックの使用：トレーニングの監視" class="md-nav__link">
+    コールバックの使用：トレーニングの監視
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="アタリゲームズ" class="md-nav__link">
+    アタリゲームズ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mujoco" title="Mujoco：入力フィーチャの正規化" class="md-nav__link">
+    Mujoco：入力フィーチャの正規化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="レトロソニック" class="md-nav__link">
+    レトロソニック
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="カスタム方策ネットワーク" class="md-nav__link">
+    カスタム方策ネットワーク
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="ボーナス：継続的トレーニング" class="md-nav__link">
+    ボーナス：継続的トレーニング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="結論" class="md-nav__link">
+    結論
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="謝辞" class="md-nav__link">
+    謝辞
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="著者について" class="md-nav__link">
+    著者について
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-colab-notebook_1" title="Google Colab notebook リスト" class="md-nav__link">
+    Google Colab notebook リスト
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/coolerking/edit/master/docs/stable-baselines/blog.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="stable-baselinesopenai-base-line-">Stable Baselines:OpenAI base lineのフォーク - より簡単に強化学習を行うために</h1>
+<h2 id="scikit-learn">統一された構造（scikit-learnのようなインターフェイス）とドキュメンテーションによる単一のコードスタイル</h2>
+<p><img alt="イメージクレジット：L.M.Tenkes" src="../image_credit.png" /></p>
+<p>数週間の苦労を経て、OpenAI Baselinesに基づいた共通インタフェースによる強化学習（RL）アルゴリズムの実装セット Stable Baselines のリリースをようやく発表するはこびとなりました。私たちは、設計に当たり使いやすさと一貫性に焦点を当てました。この記事では、フォークのベースとなったパッケージや、さまざまな例（基本的な使い方、セーブ/ロードエージェント、簡単なマルチプロセッシング、Atariゲームのトレーニングなど）を紹介します。</p>
+<p><strong>更新</strong> : オンラインに <a href="http://stable-baselines.readthedocs.io/">ドキュメント</a> を公開しました。また、Tensorboardのサポートが追加されました。</p>
+<ul>
+<li><a href="https://github.com/hill-a/stable-baselines">GitHub hill-a/stable-baselines</a></li>
+</ul>
+<p>TL;DR:
+安定したベースラインでは、PPOエージェントのトレーニングは次のように簡単に記述できます。</p>
+<pre><code class="python"># from https://github.com/hill-a/stable-baselines
+import gym
+
+from stable_baselines.common.policies import MlpPolicy
+from stable_baselines.common.vec_env import DummyVecEnv
+from stable_baselines import PPO2
+
+env = gym.make('CartPole-v1')
+# Vectorized environments allow to easily multiprocess training
+# we demonstrate its usefulness in the next examples
+env = DummyVecEnv([lambda: env])  # The algorithms require a vectorized environment to run
+
+model = PPO2(MlpPolicy, env, verbose=1)
+# エージェントのトレーニング
+model.learn(total_timesteps=10000)
+
+# トレーニング済みエージェントでエンジョイ
+obs = env.reset()
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, dones, info = env.step(action)
+    env.render()
+</code></pre>
+
+<p>基本的な使い方：stable baselinesを使ったエージェントのトレーニング</p>
+<p>もっとシンプルにすることはできますか？もちろんできますよ！stable baselines を使用すると、1行のコードで強化学習エージェントを定義してトレーニングすることができます。</p>
+<pre><code class="python">
+from stable_baselines import PPO2
+
+# モデルの定義とトレーニングを１行で記述！
+trained_model = PPO2('MlpPolicy', 'CartPole-v1').learn(total_timesteps=10000)
+# 次の行から trained_model.get_env() を使ってgym env へアクセスすることができます
+</code></pre>
+
+<p>Google Colabでも試すことができます。</p>
+<h2 id="_1">フォークの歴史</h2>
+<p>私たちの研究で OpenAI Baselines を使い始めたころ、上手く機能する強化学習アルゴリズムを見つけることができ、うれしかったです [^1] 。しかし、画像の代わりに学習済みの機能を使おうとして、ちょっと微調整しようとした瞬間から、それは地獄になりました。コメントのないコードを修正しなければならなかったからです。</p>
+<p>私たちが経験した困難の中には、コメントの欠如、有意義な変数名と一貫性（共通のコードスタイルなし）、多数の重複コード <a href="執筆時点で、OpenAIはbaselinesの改善に努力しているようですが、それでもなお欠けているものが少なくありません。">^2</a> がありました。</p>
+<p><img alt="No Comments.png" src="../no_comments.png" /></p>
+<p>GithubリポジトリのIssueでいうと、<a href="https://github.com/openai/baselines/issues/285">＃285</a>、<a href="https://github.com/openai/baselines/issues/400">＃400</a>、<a href="https://github.com/openai/baselines/issues/413">＃413</a> 、<a href="https://github.com/openai/baselines/issues/445">＃445</a> 、<a href="https://www.reddit.com/r/MachineLearning/comments/7l23y8/d_is_it_me_or_can_openai_baselines_be_difficult/">Reddit</a>だけではありませんでした。</p>
+<p>このため、Baselinesリポジトリのmasterブランチに関する新しいコミットがコードを破った後、2つのアイデアを念頭にフォークを作成することにしました。</p>
+<ul>
+<li>コメント付きコードとシングルコード</li>
+<li>すべてのアルゴリズムの共通インタフェース</li>
+</ul>
+<p>[^1]: わたしたちの実験では、Baselinesコードベースのものは、他のコードベースと比較して（パフォーマンスの面で）最良の結果を与えるものでした。また、<a href="https://arxiv.org/abs/1709.06560"> <strong>Deep reinforcement learning that matters</strong> </a> においてBaselines DDPG 実装は他のコードベースのものよりも優れていることを示すことができました。最近では、Dota 2をプレイしているOpenAI 5はPPOをデフォルトのコアとして使用しています。</p>
+<h3 id="_2">どんなアルゴリズムが含まれていますか？</h3>
+<p>OpenAI Baselines（およびフォークされた Stable Baselines）には、A2C、PPO、TRPO、DQN、ACKTR、ACERおよびDDPGが含まれています。<a href="https://github.com/hill-a/stable-baselines">README</a>には、サポートされているもの（アクション・スペース、マルチプロセッシング）に関する概要が表形式で参照可能です。</p>
+<p>Baselines には、事前処理やマルチプロセッシングなどの便利なラッパも付属しています。これらはサンプルコードで有用性を示しています。</p>
+<h2 id="_3">新着情報?</h2>
+<h3 id="_4">ユニファイドインターフェイス</h3>
+<p>すべてのアルゴリズムは同じ構造でデザインされています。私たちは、ちょうどscikitのようなインターフェースで実現したいと思っていました。サンプルコードでもわかるように、それは非常にシンプルなのです！</p>
+<p>私たちは、すべてのアルゴリズムに対して <em>train</em> ( <em>fit</em> とおなじ）、<em>save</em>、<em>load</em>、および_predict_（_sk-learn_と同じ）のような一般的なメソッドを提供します。</p>
+<h3 id="_5">ロード、セーブ、ムーブのサポート</h3>
+<p>すべてのアルゴリズムのセーブ・ロード機能、コールバック（ライブプロット用）、完全な Tensorboard サポート、および行動確率の出力メソッドを追加しました。</p>
+<h3 id="_6">あらゆる種類のフィーチャのトレーニング</h3>
+<p>私たちは、任意のフィーチャに対するRLトレーニングのサポートを追加しました。つまり、RLアルゴリズムはピクセル以外のものでトレーニング可能です（現在のOpenAI Baselinesは、イメージを入力として使用しない場合、連続的行動のみをサポートします）。</p>
+<p>実際には、<strong><a href="https://arxiv.org/abs/1802.04181">状態表現学習</a>と、方策学習からの特徴抽出を分離すること</strong>は、我々の研究の主題であり、最近の研究（例えば、<a href="https://worldmodels.github.io/">World Models</a> と<a href="https://pathak22.github.io/large-scale-curiosity/">Curiosity-Driven Learning：好奇心に基づく学習</a> ）の焦点にもなっています。したがって、私たちはこれをフォークの重要なフィーチャと考えました。</p>
+<h3 id="_7">より多くのテストとカバレッジ</h3>
+<p>OpenAIベースラインのリファクタリングを開始したとき、コードカバレッジはわずか16％でした。すなわち、すべてのコードステートメントの16％しかテストされまていませんでした。リファクタリング中にテストを追加し、65％のカバレッジを達成しました！（コードの大部分はMujoco関連の機能に由来し、Mujocoは商用の物理エンジンであるため、継続的インテグレーションが難しい）。</p>
+<h3 id="_8">バグ修正</h3>
+<p>私たちは <a href="https://github.com/hill-a/stable-baselines/releases">いくつかの問題を修正</a> 時にコメントを利用しました。たとえば、フレームスタッキング用のラッパは、グレイスケール画像でのみ動作していました（ <a href="https://github.com/openai/baselines/commit/4993286230ac92ead39a66005b7042b56b8598b0">OpenAIの以前のバグフィックス</a> は、<a href="https://github.com/openai/baselines/commit/9fa8e1baf1d1f975b87b369a8082122eac812eb1">新しいコミットの 1つ</a> によって消去されていました ...）。</p>
+<h2 id="_9">サンプル：「話はもういいから、コードで教えて」</h2>
+<p>次のセクションでは、Stable Baselines の使用方法に関するさまざまなサンプルを取り上げます。<a href="https://colab.research.google.com/drive/1_1H5bjWKYBVKbbs-Kj83dsfuZieDNcFU">基本的な使い方</a> 、セーブ/ロード、マルチプロセッシング、プロット、Atariゲームのトレーニングなどをカバーします。</p>
+<h3 id="google-colab-notebook">Google Colab notebookリスト</h3>
+<ul>
+<li><a href="https://colab.research.google.com/drive/1_1H5bjWKYBVKbbs-Kj83dsfuZieDNcFU">入門</a></li>
+<li><a href="https://colab.research.google.com/drive/1KoAQ1C_BNtGV3sVvZCnNZaER9rstmy0s">トレーニング、セーブ、ロード</a></li>
+<li><a href="https://colab.research.google.com/drive/1ZzNFMUUi923foaVsYb4YjPy4mjKtnOxb">マルチプロセッシング</a></li>
+<li><a href="https://colab.research.google.com/drive/1L_IMo6v0a0ALK8nefZm6PqPSy0vZIWBT">モニタートレーニングとプロット</a></li>
+<li><a href="https://colab.research.google.com/drive/1iYK11yDzOOqnrXi1Sfjm1iekZr4cxLaN">アタリゲームズ</a></li>
+</ul>
+<h3 id="_10">基本的な使い方：トレーニング、セーブ、ロード</h3>
+<p>以下のサンプルでは、Lunar Lander環境でA2Cモデルをトレーニングし、セーブして、ロードします。</p>
+<p>関連するColabノートブック： <a href="https://colab.research.google.com/drive/1KoAQ1C_BNtGV3sVvZCnNZaER9rstmy0s">オンラインで試してみてください！</a></p>
+<p><img alt="Lunar Lander環境" src="../lunar_lander.gif" /></p>
+<pre><code class="python">import gym
+
+from stable_baselines import A2C
+from stable_baselines.common.policies import MlpPolicy
+from stable_baselines.common.vec_env import DummyVecEnv
+
+# 環境の生成及びラップ
+env = gym.make('LunarLander-v2')
+env = DummyVecEnv([lambda: env])
+
+model = A2C(MlpPolicy, env, ent_coef=0.1, verbose=1)
+# エージェントのトレーニング
+model.learn(total_timesteps=100000)
+# エージェントのセーブ
+model.save(&quot;a2c_lunar&quot;)
+del model  # ロードデモのために一旦トレーニング済みエージェントを削除
+
+# レーニング済みエージェントのロード
+model = A2C.load(&quot;a2c_lunar&quot;)
+
+# トレーニング済みエージェントでエンジョイ
+obs = env.reset()
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, dones, info = env.step(action)
+    env.render()
+</code></pre>
+
+<h3 id="_11">マルチプロセッシング：ベクトル化された環境のパワーを解き放つ</h3>
+<p>関連するColabノートブック： <a href="https://colab.research.google.com/drive/1ZzNFMUUi923foaVsYb4YjPy4mjKtnOxb">オンラインで試してみてください  ！</a></p>
+<p><img alt="Cart Pole環境" src="../cart_pole.gif" /></p>
+<pre><code class="python">import gym
+import numpy as np
+
+from stable_baselines.common.policies import MlpPolicy
+from stable_baselines.common.vec_env import SubprocVecEnv
+from stable_baselines.common import set_global_seeds
+from stable_baselines import ACKTR
+
+def make_env(env_id, rank, seed=0):
+    &quot;&quot;&quot;
+   マルチプロセッサ環境のためのユーティリティ関数
+
+    :param env_id: (str) 環境ID
+    :param num_env: (int) サブプロセスで使用したい環境数
+    :param seed: (int) RNGへの初期シード
+    :param rank: (int) サブプロセスのインデックス
+    &quot;&quot;&quot;
+    def _init():
+        env = gym.make(env_id)
+        env.seed(seed + rank)
+        return env
+    set_global_seeds(seed)
+    return _init
+
+env_id = &quot;CartPole-v1&quot;
+num_cpu = 4  # 使用するプロセス数
+# ベクトル化された環境の構築
+env = SubprocVecEnv([make_env(env_id, i) for i in range(num_cpu)])
+
+model = ACKTR(MlpPolicy, env, verbose=1)
+model.learn(total_timesteps=25000)
+
+obs = env.reset()
+for _ in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, dones, info = env.step(action)
+    env.render()
+</code></pre>
+
+<h3 id="tensorboard">Tensorboard によるトレーニングの監視</h3>
+<p><em>v2.0.0の新機能</em></p>
+<p>OpenAIはTensorboardのサポートを提供しました（ドキュメンテーションの <a href="https://stable-baselines.readthedocs.io/en/master/guide/tensorboard.html">レガシーインテグレーション</a> を参照）。完全なTensorboardインテグレーション（グラフの可視化、学習曲線など）を追加しました。</p>
+<p>Tensorboard へのロギングを有効にするには、<code>tensorboard_log</code> 引数に有効なパスを指定する必要があります。</p>
+<pre><code class="python">from stable_baselines import A2C
+
+model = A2C('MlpPolicy', 'CartPole-v1', verbose=1, tensorboard_log=&quot;/tmp/a2c_cartpole_tensorboard/&quot;)
+model.learn(total_timesteps=50000)
+</code></pre>
+
+<p><img alt="ぶっちゃけCart Poleはあんまりうまくいってないみたい... " src="../tensorboard.png" /></p>
+<p>この実験を再現するためのコード：https : //gist.github.com/araffin/ee9daee110af3b837b0e3a46a6bb403b</p>
+<h3 id="_12">コールバックの使用：トレーニングの監視</h3>
+<p>エージェント内で呼び出されるカスタムコールバック関数を定義することができます。これは、Tensorboard（またはVisdom）のライブラーニングカーブを表示したり、ベストエージェントを保存するなど、トレーニングを監視する場合に役立ちます。</p>
+<p>関連ノートブック（プロットを含む）： <a href="https://colab.research.google.com/drive/1L_IMo6v0a0ALK8nefZm6PqPSy0vZIWBT">オンラインで試してみてください！</a></p>
+<pre><code class="python">import os
+
+import gym
+import numpy as np
+import matplotlib.pyplot as plt
+
+from stable_baselines.common.vec_env.dummy_vec_env import DummyVecEnv
+from stable_baselines.bench import Monitor
+from stable_baselines.results_plotter import load_results, ts2xy
+from stable_baselines import DDPG
+from stable_baselines.ddpg.noise import AdaptiveParamNoiseSpec
+
+
+best_mean_reward, n_steps = -np.inf, 0
+
+def callback(_locals, _globals):
+    &quot;&quot;&quot;
+    ステップごともしくはnステップ目のあと(ACERやPPO2参照のこと)に呼び出されるコールバック関数
+    :param _locals: (dict)
+    :param _globals: (dict)
+    &quot;&quot;&quot;
+    global n_steps, best_mean_reward
+    # 1000 回よびだしごとに出力
+    if (n_steps + 1) % 1000 == 0:
+        # Evaluate policy performance
+        x, y = ts2xy(load_results(log_dir), 'timesteps')
+        if len(x) &gt; 0:
+            mean_reward = np.mean(y[-100:])
+            print(x[-1], 'timesteps')
+            print(&quot;Best mean reward: {:.2f} - Last mean reward per episode: {:.2f}&quot;.format(best_mean_reward, mean_reward))
+
+            # ここでエージェントセーブして新規のベストモデルを保存する
+            if mean_reward &gt; best_mean_reward:
+                best_mean_reward = mean_reward
+                # ベストモデルセーブのための例
+                print(&quot;Saving new best model&quot;)
+                _locals['self'].save(log_dir + 'best_model.pkl')
+    n_steps += 1
+    return False
+
+
+# log ディレクトリの構築
+log_dir = &quot;/tmp/gym/&quot;
+os.makedirs(log_dir, exist_ok=True)
+
+# 環境の構築及びラップ
+env = gym.make('LunarLanderContinuous-v2')
+env = Monitor(env, log_dir, allow_early_resets=True)
+env = DummyVecEnv([lambda: env])
+
+# 探査のためにいくつかのパラメータノイズを追加
+param_noise = AdaptiveParamNoiseSpec(initial_stddev=0.2, desired_action_stddev=0.2)
+model = DDPG('MlpPolicy', env, param_noise=param_noise, memory_limit=int(1e6), verbose=0)
+# エージェントのトレーニング
+model.learn(total_timesteps=200000, callback=callback)
+</code></pre>
+
+<h3 id="_13">アタリゲームズ</h3>
+<p>関連ノートブック： <a href="https://colab.research.google.com/drive/1iYK11yDzOOqnrXi1Sfjm1iekZr4cxLaN">オンラインで試してみてください！</a></p>
+<p><img alt="Pong環境" src="../atari_games.gif" /></p>
+<p>アタリゲームでのRLエージェントのトレーニングは、<code>make_atari_env</code>ヘルパー関数のおかげで簡単です。ここですべての前処理と<a href="https://danieltakeshi.github.io/2016/11/25/frame-skipping-and-preprocessing-for-deep-q-networks-on-atari-2600-games/">マルチプロセッシング</a>を行います。</p>
+<pre><code class="python">from stable_baselines.common.cmd_util import make_atari_env
+from stable_baselines.common.policies import CnnPolicy
+from stable_baselines.common.vec_env import VecFrameStack
+from stable_baselines import ACER
+
+# アタリ環境を正しく構築しラップする
+# 環境ジェネレータが既に存在している。
+#ここでは、マルチプロセスによるトレーニングを実行(num_env=4 =&gt; 4 processes)
+env = make_atari_env('PongNoFrameskip-v4', num_env=4, seed=0)
+# 4フレームでフレームスタッキング
+env = VecFrameStack(env, n_stack=4)
+
+model = ACER(CnnPolicy, env, verbose=1)
+model.learn(total_timesteps=25000)
+
+obs = env.reset()
+while True:
+    action, _states = model.predict(obs)
+    obs, rewards, dones, info = env.step(action)
+    env.render()
+</code></pre>
+
+<h3 id="mujoco">Mujoco：入力フィーチャの正規化</h3>
+<p>入力フィーチャを正規化することは、<a href="http://www.mujoco.org/">Mujoco</a> でのトレーニングなどの例では、RLエージェントを正常に練習するために不可欠です（デフォルトでは画像は拡大縮小されますが、他のタイプの入力は適用されません）。そのために、ラッパが存在し、入力フィーチャの実行平均と標準偏差を計算します（報酬についても同じことができます）。</p>
+<p><strong>注</strong>：Mujocoは独自のエンジンでありライセンスが必要なため、このサンプルではノートブックを提供できません。</p>
+<pre><code class="python">import gym 
+
+from stable_baselines.common.policies import MlpPolicy
+from stable_baselines.common.vec_env import DummyVecEnv, VecNormalize
+from stable_baselines import PPO2
+
+env = DummyVecEnv([lambda: gym.make(&quot;Reacher-v2&quot;)])
+# 入力フィーチャの自動正規化
+env = VecNormalize(env, norm_obs=True, norm_reward=False,
+                   clip_obs=10.)
+
+model = PPO2(MlpPolicy, env)
+model.learn(total_timesteps=2000)
+
+# エージェントを保存するときに実行中の平均を
+# 保存することを忘れないでください
+log_dir = &quot;/tmp/&quot;
+model.save(log_dir + &quot;ppo_reacher&quot;)
+env.save_running_average(log_dir)
+</code></pre>
+
+<h3 id="_14">レトロソニック</h3>
+<pre><code>python3 -m retro.import /path/to/your/ROMs/directory/
+</code></pre>
+
+<pre><code class="python">import retro
+from stable_baselines import PPO2
+from stable_baselines.common.policies import CnnPolicy
+from stable_baselines.common.vec_env import DummyVecEnv
+
+env = retro.make(game='SonicAndKnuckles3-Genesis')
+env = DummyVecEnv([lambda: env])
+
+model = PPO2(policy=CnnPolicy, env=env, verbose=1)
+model.learn(total_timesteps=10000)
+
+obs = env.reset()
+while True:
+    action, _info = model.predict(obs)    
+    obs, rewards, dones, info = env.step(action)
+    env.render()
+</code></pre>
+
+<blockquote>
+<p><em>訳者注</em>：コレ..メガドライブ(Genesys)のROMイメージ使ってるけど..著作権違反になるんじゃ..ソニックってまだ著作権、切れてないよね..
+ということで、エクサ社員の皆さんはこのセクションは無視してください。</p>
+</blockquote>
+<h3 id="_15">カスタム方策ネットワーク</h3>
+<p>安定したベースラインは、画像（CNNPolicies）と他のタイプの入力（MlpPolicies）にデフォルトの方策ネットワークを提供します。方策ネットワークのカスタムアーキテクチャを簡単に定義することもできます。</p>
+<pre><code class="python">from stable_baselines.common.policies import FeedForwardPolicy
+from stable_baselines import A2C
+
+# 各サイズが128の3つの層のカスタムMLP方策
+class CustomPolicy(FeedForwardPolicy):
+    def __init__(self, *args, **kwargs):
+        super(CustomPolicy, self).__init__(*args, **kwargs,
+                                           layers=[128, 128, 128],
+                                           feature_extraction=&quot;mlp&quot;)
+
+model = A2C(CustomPolicy, 'LunarLander-v2', verbose=1)
+# エージェントのトレーニング
+model.learn(total_timesteps=100000)
+</code></pre>
+
+<h3 id="_16">ボーナス：継続的トレーニング</h3>
+<p>ある学習中の環境から別の環境へ継続的に学習を移動させることができます（<code>DemoAttack-v0</code>環境のPPO、その後<code>SpaceInvaders-v0</code>へ移動）：</p>
+<pre><code class="python">from stable_baselines.common.cmd_util import make_atari_env
+from stable_baselines.common.policies import CnnPolicy
+from stable_baselines import PPO2
+
+# アタリ環境を正しく作成してラップする環境ジェネレータが
+# 既に存在します
+env = make_atari_env('DemonAttackNoFrameskip-v4', num_env=8, seed=0)
+
+model = PPO2(CnnPolicy, env, verbose=1)
+model.learn(total_timesteps=10000)
+
+obs = env.reset()
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, dones, info = env.step(action)
+    env.render()
+
+# 環境を変更する場合、環境の数は同じでなければなりません
+env = make_atari_env('SpaceInvadersNoFrameskip-v4', num_env=8, seed=0)
+
+# 環境の変更
+model.set_env(env)
+model.learn(total_timesteps=10000)
+
+obs = env.reset()
+while True:
+    action, _states = model.predict(obs)
+    obs, rewards, dones, info = env.step(action)
+    env.render()
+</code></pre>
+
+<h2 id="_17">結論</h2>
+<p>私たちは、Stable Baselinesを発表しました。Stable Baselineは、強化学習を幅広い人たちに利用してもらうことを目指しています。私たちは、異なるアルゴリズムを簡素化し統一し、強化学習を実験するためのscikit-learnライクなインタフェースを提供します。</p>
+<p>Baselines をより良くすることに興味がある人には、作業が必要なドキュメントがまだあります。なのでぜひ、Issueを作成して、リポジトリでpull request を作成してください。</p>
+<p>作業中：ACER / ACKTRに対する継続的行動のサポートを追加すること</p>
+<p>この記事は <a href="https://medium.com/@hill_a">Ashley Hill</a>と共同で執筆しました。</p>
+<h3 id="_18">謝辞</h3>
+<p>Stable Baselinesは、<a href="http://www.ensta-paristech.fr/en">ENSTA ParisTech</a>の<a href="http://u2is.ensta-paristech.fr/index.php?lang=en">ロボット研究室U2IS</a>（ <a href="https://flowers.inria.fr/">INRIA Flowersチーム</a>）で作成されました。</p>
+<p>この作業は、欧州連合Horizo​​n 2020 FET研究およびイノベーションプログラムを通じて、<a href="http://www.robotsthatdream.eu/">DREAMプロジェクト</a>の助成金協約番号640891で援助されています。</p>
+<h3 id="_19">著者について</h3>
+<p>私たちは両方とも、ロボット工学のための強化学習の研究を行っています。私たちの研究の焦点は、State Representation Learning（強化学習の特徴抽出）です。パートタイムでは、<a href="https://becominghuman.ai/autonomous-racing-robot-with-an-arduino-a-raspberry-pi-and-a-pi-camera-3e72819e1e63">自動運転レーシングカー</a>の構築などDIYプロジェクトの実験を行いたいと考えています。</p>
+<h3 id="google-colab-notebook_1">Google Colab notebook リスト</h3>
+<ul>
+<li><a href="https://colab.research.google.com/drive/1_1H5bjWKYBVKbbs-Kj83dsfuZieDNcFU">入門</a></li>
+<li><a href="https://colab.research.google.com/drive/1KoAQ1C_BNtGV3sVvZCnNZaER9rstmy0s">トレーニング、セーブ、ロード</a></li>
+<li><a href="https://colab.research.google.com/drive/1ZzNFMUUi923foaVsYb4YjPy4mjKtnOxb">マルチプロセッシング</a></li>
+<li><a href="https://colab.research.google.com/drive/1L_IMo6v0a0ALK8nefZm6PqPSy0vZIWBT">トレーニングの監視とグラフ化</a></li>
+<li><a href="https://colab.research.google.com/drive/1iYK11yDzOOqnrXi1Sfjm1iekZr4cxLaN">アタリゲームズ</a></li>
+</ul>
+<p>補足：トレーニング済みエージェントのGIFを作成するには？</p>
+<pre><code class="python">import imageio
+import numpy as np
+
+from stable_baselines.common.policies import MlpPolicy
+from stable_baselines import A2C
+
+model = A2C(MlpPolicy, &quot;LunarLander-v2&quot;).learn(100000)
+
+images = []                                                                                              
+obs = model.env.reset()
+img = model.env.render(mode='rgb_array')
+for i in range(350):
+    images.append(img)
+    action, _ = model.predict(obs)
+    obs, _, _ ,_ = model.env.step(action)
+    img = model.env.render(mode='rgb_array')
+
+imageio.mimsave('lander_a2c.gif', [np.array(img[0]) for i, img in enumerate(images) if i%2 == 0], fps=29)
+</code></pre>
+
+<p><img alt="ターミナライザを使ったオンライン強化学習" src="../terminalizer.gif" /></p>
+<p>Vincenzo LomonacoとNataliaDíazRodríguezに感謝します。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../utility/donkey/" title="donkey" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                donkey
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../sixaxis/" title="sixaxis" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                sixaxis
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

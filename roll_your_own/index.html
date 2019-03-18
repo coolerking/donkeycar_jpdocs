@@ -1,0 +1,920 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Roll Your Own - Donkey Car</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Donkey Car" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Donkey Car
+            </span>
+            <span class="md-header-nav__topic">
+              Roll Your Own
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Donkey Car" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Donkey Car
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/build_hardware/" title="Build a car." class="md-nav__link">
+      Build a car.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/install_software/" title="Install the software" class="md-nav__link">
+      Install the software
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/get_driving/" title="Get driving." class="md-nav__link">
+      Get driving.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/calibrate/" title="Calibrate steering and throttle." class="md-nav__link">
+      Calibrate steering and throttle.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/train_autopilot/" title="Train an autopilot." class="md-nav__link">
+      Train an autopilot.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide/simulator/" title="Donkey Simulator." class="md-nav__link">
+      Donkey Simulator.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Parts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Parts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parts/about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parts/actuators/" title="Actuators" class="md-nav__link">
+      Actuators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parts/controllers/" title="Controllers" class="md-nav__link">
+      Controllers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parts/stores/" title="Stores" class="md-nav__link">
+      Stores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parts/imu/" title="IMU" class="md-nav__link">
+      IMU
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Utilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utility/donkey/" title="donkey" class="md-nav__link">
+      donkey
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      References
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stable-baselines/blog/" title="stable-baselines" class="md-nav__link">
+      stable-baselines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sixaxis/" title="sixaxis" class="md-nav__link">
+      sixaxis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wii-u/" title="Wii-U" class="md-nav__link">
+      Wii-U
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../paper/Learn_to_Drive_in_a_Day.md" title="Learn to drive in a Day" class="md-nav__link">
+      Learn to drive in a Day
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release2.5.8/" title="ver2.5.8" class="md-nav__link">
+      ver2.5.8
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../supported_cars/" title="Supported Cars" class="md-nav__link">
+      Supported Cars
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Roll Your Own
+      </label>
+    
+    <a href="./" title="Roll Your Own" class="md-nav__link md-nav__link--active">
+      Roll Your Own
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-quick-and-dirty" title="The Quick and Dirty" class="md-nav__link">
+    The Quick and Dirty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="サーボ仕様" class="md-nav__link">
+    サーボ仕様
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esc" title="ESC 仕様" class="md-nav__link">
+    ESC 仕様
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="受信機 仕様" class="md-nav__link">
+    受信機 仕様
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="バッテリ" class="md-nav__link">
+    バッテリ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="物理的制約" class="md-nav__link">
+    物理的制約
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="その他オプション" class="md-nav__link">
+    その他オプション
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contribute/" title="Contribute" class="md-nav__link">
+      Contribute
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tests/" title="Tests" class="md-nav__link">
+      Tests
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../release/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-quick-and-dirty" title="The Quick and Dirty" class="md-nav__link">
+    The Quick and Dirty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="サーボ仕様" class="md-nav__link">
+    サーボ仕様
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esc" title="ESC 仕様" class="md-nav__link">
+    ESC 仕様
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="受信機 仕様" class="md-nav__link">
+    受信機 仕様
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="バッテリ" class="md-nav__link">
+    バッテリ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="物理的制約" class="md-nav__link">
+    物理的制約
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="その他オプション" class="md-nav__link">
+    その他オプション
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/coolerking/edit/master/docs/roll_your_own.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="_1">独自車両の開発</h1>
+<p><img alt="Crunch" src="../assets/build_hardware/Crunch.png" /></p>
+<h2 id="the-quick-and-dirty">The Quick and Dirty</h2>
+<ul>
+<li>あなたの車はRaspberry Piから制御するのが簡単である必要があります。</li>
+<li>あなたの車はあまりにも重く危険なので（そして高価なので）、とても大きくする必要はありません。</li>
+<li>あなたの車は、最小限の量の装備を搭載する必要があるため、小さすぎる必要もありません。</li>
+<li>あなたの車は、それが意味を成すように、モデルがパワーとコントロールの最小性能基準を満たす必要があります。</li>
+</ul>
+<p>これは、次のような意味です:</p>
+<ul>
+<li>あなたの車には、標準のRC 3ピン制御信号（RC PWMスタイル）を取るモータ（ESC）用のスピードコントローラが必要です。</li>
+<li>あなたの車には標準の RC 3 ピン制御信号（RC PWMスタイル）を取るステアリングサーボが必要です。</li>
+<li>あなたの車には、ESCとステアリング・サーボのそれぞれに標準100ミル（2.54 mm）のピン・ヘッダが入っているラジオ・レシーバーが必要です。</li>
+<li>DIYRobocars レースでレースをしたい場合、あなたの車は1/18スケール（最小）と1/8スケール（最大）の間にある必要があります。</li>
+<li>あなたの車は、ブラシ付きモータまたは感知されたブラシレスモータを使用する必要があります。センサレスブラシレスモータは、低速では粗すぎます。ブラシレスモータを搭載した車を購入する場合は、常にセンサレスブラシレスモータであり、ESCとともに交換する必要があります。</li>
+</ul>
+<p>おそらく他のオプションも可能です（このドキュメントの最後を参照してください）。</p>
+<p>多くの(Donkey Carのベースになるような)車両のメーカは、一般的に安価であるため、 "統合された" RC趣味の車を探すことになります。しかし、これらが安価である理由は、エレクトロニクスとメカニックスの多くの部分を単一のパッケージに統合することで実現している場合があります。これは、Raspberry Piで車を制御するために適切な信号をフックさせることができないことを意味します。また実際に、期待された信号は統合された車の中に全く存在しない場合があるかもしれません。</p>
+<p>統合されたRXとESCの例を示します。これらは避けるべきです。 
+<img alt="RX ESC example" src="../assets/ESC_RX.png" /></p>
+<p>電源レールと制御信号の違い、マイクロ秒の持続時間、ボルト、アンペア、ワット、時間、オーム、および他の測定単位の関係など、エレクトロニクスに関するいくつかのことを知る必要があります。</p>
+<h2 id="_2">サーボ仕様</h2>
+<p>RCに搭載されているサーボは、自動車のステアリングホイールを制御するために使用されます。サーボは、典型的には、電源ワイヤ（車によって異なる）に約4.8Vから6Vの入力があり、信号線にPWM制御信号が入力されることを想定しています。典型的には、3本のワイヤは、黒色 - 赤 - 白、または茶 - 赤 - 黄色であり、暗線（黒/茶色）がグランド(0V)、中心線（赤色）が電力(V)であり、光線（白/黄色）は制御です。</p>
+<p>制御信号は1秒間に60回のパルスが送信されるRC形式のPWMで、このパルスの幅はサーボが左右にどのように回転するかを制御します。このパルスが1500マイクロ秒であるとき、サーボは中心に置かれます。パルスが1000マイクロ秒であれば、サーボは左（または右）に旋回し、パルスが2000マイクロ秒であるとき、サーボは他の方向に旋回します。これは、モータのデューティ・サイクルやLEDの輝度を制御するのに使用するのと同じ種類のPWMではありません。</p>
+<p>サーボの電源は、通常、BEC（バッテリエリミネータ回路）が内蔵されたモータESCから供給されます。</p>
+<h2 id="esc">ESC 仕様</h2>
+<p>ESCの役割は、RC PWM制御信号（1000〜2000マイクロ秒間のパルス）を入力し、それを使用してモータへの電力を制御し、モータが順方向または逆方向に異なる電力量で回転するようにすることです。繰り返しますが、1500マイクロ秒は一般的には「中心」を意味しており、モータにおける「死点」を意味しています。</p>
+<p>バッテリは一般的に、単純な制御信号よりも太い配線を使用してESCにまっすぐ接続します。これは、モータが制御より多くの電流を消費するためです。その後、ESCは同じ厚さの電源配線でモータに接続します。標準のDonkeyモータとESCのピーク電流はおそらく約12Aです。強力なブラシレスモータを搭載した1/8スケールのRCカーは、200Aまでピークを引き出すことができます！</p>
+<p>さらに、ESCは、通常、ステアリングサーボを制御するのに必要な電力を出力する線形またはスイッチング電圧コンバータを含んでいます。これは典型的に4.8Vから6Vの範囲のどこかにあります。ESCに内蔵されているほとんどのBECは、約1A以上の電流を供給しないため、ステアリング・サーボとRaspberry Piの両方にBECから電力を供給することは通常不可能です。</p>
+<h2 id="_3">受信機 仕様</h2>
+<p>「レシーバが必要」と表示されている「キットカー」を購入した場合、レシーバを購入する必要はありません。Raspberry PiとPCA9685ボードは受信機の役目を果たし、制御信号を車に出力します。ステアリング・サーボ、モータ、ESCが付属しているが、ラジオ機能のない「キットカー」を購入することは、実際にあなたが作る車が正しい信号を発することを確認する素晴らしい方法です。適切なPWM信号用に設計できるでしょう。</p>
+<p>車にレシーバが付いている場合は、ステアリング・サーボとESC制御のために、3ピン・ヘッダが隣り合っていることを確認してください。一部のレシーバには追加のチャネル用の3ピンヘッダが追加されている場合があります。空の場合や、ホーン、ライトなどのファンシーアタッチメントを制御する場合があります。</p>
+<p>トレーニングデータを収集するときにRCラジオを使用して車を運転する Donkey Car に修正が加えられました。これは、あなたが PlayStation のコントローラや携帯電話で普通に得るよりも、車のコントロールを良くします。ただし、PCA9685ボードを外付けマイクロコントローラで置き換え、donkey ソフトウェアを変更して使用する必要があります。</p>
+<p>最後に、一部のレシーバは、PWM制御信号に加えて、制御信号を含むシリアルデータパケットを出力することができるものもあります。そのようなレシーバの一例として、PWM信号用に6つの出力チャネルを持つFS-i6Bがあります。FS-i6Bは、115,200 bpsでシリアルデータとして10チャネルのデータを出力することができます。これは、外付けマイクロコントローラが読み取ります。おそらくRaspberry Piに対して変更（Piブートローダの再構成と、donkeyソフトウェアへのカスタム変更)が必要です。</p>
+<h2 id="_4">バッテリ</h2>
+<p>標準Donkey Carには、NiMH（ニッケルメタルハイドライド）バッテリが付属しています。これは、バッテリを充電する前に少し時間（5-10分）をかければ、モータを動かすのに十分な状態になります。この電池の仕様は6セル、1100mAhです。NiHMバッテリの電圧範囲は0.9V〜1.35Vで、公称電圧は1.2Vであるため、5.4V〜8.1Vの範囲の電圧が期待できます。</p>
+<p>NiHM電池は、重量と体積あたりに中程度の容量のエネルギを持っています。これをリチウムポリマバッテリ（LiPo）にアップグレードすることで、Magnet カーの走行時間やパフォーマンスを向上させることができます。通常リチウムバッテリは、1セルあたり3.2V〜4.2Vなので、2セルバッテリ（2S）では 6.4V〜8.4Vの範囲の電圧がラベル表示されます。リチウムポリマ電池は、一般により長い電流容量（バッテリは、走行中に1点で供給できる）とエネルギ貯蔵（バッテリが完全に充電された時のバッテリ使用回数）を有しています。</p>
+<p>バッテリの充電量（動作時間）は、アンペア時またはミリアンペア時で測定されますが、バッテリ使用時の電流量は単純にアンペアで測定されます。しかし、混乱してしまいそうですが、アンペアはしばしば1時間で割ったエネルギー量の倍数で再計算されます。この比率はしばしば「C」と呼ばれます。したがって、10C 2000mAh 定格のLiPoは、運転中に20アンペアの電流を供給することができます。5C 1100mAh 定格のNiHMは、運転中に5.5アンペアの電流を供給することができます。一般的に電池は非常に短い時間だけC 定格以上のパワーを供給しますが、内部抵抗が発熱したり、通常の動作に頼ることができないように蓄積したりします。</p>
+<p>カスタムカーの場合、車のESCとモータに必要な電圧に注意し、電圧に合ったバッテリを取得してください。 小型のRCカーには手頃な価格でNiMHが、電源としては2S LiPoが付属します。 大型RC車は、3S（11.1V）または4S（14.8V）または6S（22.2V）のリチウム電池を使用するため、一致するESCとモータの組み合わせが必要です。</p>
+<p>最後に、バッテリに合った充電器を用意してください。LiPoバッテリをお使いの場合は、バッテリに合ったバランスの良いプラグを使用して、良好なリチウムバッテリ充電器を入手してください。リチウム電池をセルあたり3.2V以下で放電しないでください。あなたはそれが死んで実行させると、それは再び正常な電圧に充電されることを望んでいません、そうしようとすると非常にバッテリを過熱し、火のそばで発火する可能性があります！その模様はテスラの燃焼YouTube動画で確認できます。 $10 を節約するためにリチウム電池を再充電して、家を傷つけてしまったという動画です。（LiPo再充電には）それだけの価値はありません。代わりに、バッテリをバッテリ残量コネクタに差し込み、バッテリが放電してしまったときにビープ音が鳴り、バッテリの再充電を知らせる、バッテリアラームを入手してください。</p>
+<h2 id="_5">物理的制約</h2>
+<p>トイカーで自動運転を実現するためにバッテリや電子機器を追加すると、自動車が最初に設計されたものより多くの負担がかかります。1/8スケールの大型車の場合、これはあまり問題にならないかもしれません。1/18スケール以下の小型車の場合、重さと重量が重くなるとステアリング出力にうまく反応しないため、自己駆動モデルでは車を制御できなくなる可能性があります。</p>
+<p>標準のMagnetではない車を使用する場合は、少なくとも、すべてのハードウェアを安全に取り付ける方法を考える必要があります。積載するだけで、実際に配線や車輪を回転させることができないことが予想されます。良い取り付けポイントを見つけて、あなたが持っている車で測定し、あなた自身の「ベースプレート」を作ることが必要になるでしょう。このベースプレートは、3Dプリント、レーザー切断、CNCフライス加工、または薄い合板に穴をあけるだけでも構いませんが、シャーシにフィットすることが重要ですので、無理やり突っ込んだり、不用意にかどを削ったりしないでください。</p>
+<p>Doug LaRue氏は、Thingiverseに <a href="https://www.thingiverse.com/thing:2781404">コンフィギュレータ</a> を組み込んで、カスタムの3Dプリントを簡単に作成できるようにしました。</p>
+<h2 id="_6">その他オプション</h2>
+<p>そうです、あなたは1/5スケールのNitro Dragsterから自走車を作ることもできるのです。さまざまな場合についての解決策をもっと学び、すべての必要なインテグレーションを自分で把握するだけなのです。Nitro 車の制御信号は同じなので、難しくないかもしれません。しかし、Donkey レーシングミートアップに使用されている屋内競技場では、燃費の良い車は使用できません。</p>
+<p>そうです、あなたはダイレクトPWM制御のLM298 Hブリッジを使用して、2つの車輪を「タンクステア（tank steer）」するための安価な2輪シャーシから自走車も作ることができます。しかし、右のステアリングコントロールを出力するには、donkeyソフトウェアを適合させる必要があります。また、HブリッジをRaspberry Piに接続する方法を理解する必要があります。PCA9685ボードから出力されるPWM信号は、モータ制御ではなく、RC制御です。また、最も手頃な価格の2輪駆動のロボットシャーシは、実際には強度が十分ではなく、機械的にも十分に安定しておらず、Donkeyカー候補者には不向きです。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../supported_cars/" title="Supported Cars" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                Supported Cars
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../contribute/" title="Contribute" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                Contribute
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.d9aa80ab.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

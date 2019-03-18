@@ -1,0 +1,890 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Calibrate steering and throttle. - Donkey Car</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Donkey Car" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Donkey Car
+            </span>
+            <span class="md-header-nav__topic">
+              Calibrate steering and throttle.
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Donkey Car" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Donkey Car
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_hardware/" title="Build a car." class="md-nav__link">
+      Build a car.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install_software/" title="Install the software" class="md-nav__link">
+      Install the software
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../get_driving/" title="Get driving." class="md-nav__link">
+      Get driving.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Calibrate steering and throttle.
+      </label>
+    
+    <a href="./" title="Calibrate steering and throttle." class="md-nav__link md-nav__link--active">
+      Calibrate steering and throttle.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="あなたの車の設定の調整方法" class="md-nav__link">
+    あなたの車の設定の調整方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="ステアリングのキャリブレーション" class="md-nav__link">
+    ステアリングのキャリブレーション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="スロットルのキャリブレーション" class="md-nav__link">
+    スロットルのキャリブレーション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="キャリブレーションの微調整" class="md-nav__link">
+    キャリブレーションの微調整
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../train_autopilot/" title="Train an autopilot." class="md-nav__link">
+      Train an autopilot.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../simulator/" title="Donkey Simulator." class="md-nav__link">
+      Donkey Simulator.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Parts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Parts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/actuators/" title="Actuators" class="md-nav__link">
+      Actuators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/controllers/" title="Controllers" class="md-nav__link">
+      Controllers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/stores/" title="Stores" class="md-nav__link">
+      Stores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/imu/" title="IMU" class="md-nav__link">
+      IMU
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Utilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utility/donkey/" title="donkey" class="md-nav__link">
+      donkey
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      References
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stable-baselines/blog/" title="stable-baselines" class="md-nav__link">
+      stable-baselines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sixaxis/" title="sixaxis" class="md-nav__link">
+      sixaxis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wii-u/" title="Wii-U" class="md-nav__link">
+      Wii-U
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../paper/Learn_to_Drive_in_a_Day.md" title="Learn to drive in a Day" class="md-nav__link">
+      Learn to drive in a Day
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release2.5.8/" title="ver2.5.8" class="md-nav__link">
+      ver2.5.8
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../supported_cars/" title="Supported Cars" class="md-nav__link">
+      Supported Cars
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../roll_your_own/" title="Roll Your Own" class="md-nav__link">
+      Roll Your Own
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contribute/" title="Contribute" class="md-nav__link">
+      Contribute
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tests/" title="Tests" class="md-nav__link">
+      Tests
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../release/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="あなたの車の設定の調整方法" class="md-nav__link">
+    あなたの車の設定の調整方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="ステアリングのキャリブレーション" class="md-nav__link">
+    ステアリングのキャリブレーション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="スロットルのキャリブレーション" class="md-nav__link">
+    スロットルのキャリブレーション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="キャリブレーションの微調整" class="md-nav__link">
+    キャリブレーションの微調整
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/coolerking/edit/master/docs/guide/calibrate.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="_1">あなたの車のキャリブレーション(調整)</h1>
+<p>あなたの車をキャリブレーション（調整）するポイントは、あなたの車が他の車と一緒に運転できるようにすることにあります。次の指示に従ってください。</p>
+<h2 id="_2">あなたの車の設定の調整方法</h2>
+<p>車の設定はすべて <code>config.py</code> スクリプトで行います。このファイルは、 <code>donkey createcar --path ~/mycar</code> コマンドを実行する際にテンプレートが作成されます。このファイルを編集して、あなたの車の動作を設定します。
+   <code>bash
+   nano ~/mycar/config.py</code></p>
+<p>私たちの目標は、これらの設定を編集して、他のすべてのキャリブレーションされたDonkey2のようにあなたの車が運転できるようにすることです。この方法で、各車の間でパイロットとデータセットを共有することができます。</p>
+<blockquote>
+<p>キャリブレーションを行うには、Raspberry Pi に ssh する必要があります。</p>
+</blockquote>
+<h2 id="_3">ステアリングのキャリブレーション</h2>
+<blockquote>
+<p>車が暴走状態となることを防ぐために、タイヤが地面から離れていることを確認してください。</p>
+</blockquote>
+<ol>
+<li>あなたの車に電源を入れる(バッテリコネクタをつなぎ、ESCの電源スイッチをONにする)。</li>
+<li>車のサーボケーブルを見つけて、どのチャンネルがPCAボードに接続されているかを確認してください。1または0でなければなりません。</li>
+<li><code>donkey calibrate --channel &lt;your_steering_channel&gt;</code>　を実行してください。</li>
+<li><code>360</code> と入力して、車の車輪がわずかに動くのを見なければなりません。もし動かなければ <code>400</code> もしくは <code>300</code> と入力します。</li>
+<li>次に、車がすべて左へ曲がりそしてすべて右へ曲がるPWM設定を見つけるために開始時の値から <code>+/-10</code> した値を入力してください。これらの値を思い出してください。</li>
+<li>これらの値を <code>config.py</code> スクリプト内の <code>STEERING_RIGHT_PWM</code>  および <code>STEERING_LEFT_PWM</code> に入力してください。</li>
+</ol>
+<h2 id="_4">スロットルのキャリブレーション</h2>
+<ol>
+<li>ESCからつながっているケーブルを見つけ、それがどのチャンネルをPCAボードに入れるのかを見てください。これがあなたのスロットルチャンネルです。</li>
+<li><code>donkey calibrate --channel &lt;your_throttle_channel&gt;</code> を実行してください。</li>
+<li>PWM値の入力を求められたら <code>370</code> と入力します。</li>
+<li>キャリブレーションされたことを示すESCビープ音が聞こえるはずです。</li>
+<li><code>400</code> と入力すると、車の車輪が前方に進むのが見えます。そうでない場合は、逆の可能性がありますので、代わりに <code>330</code> と入力してください。</li>
+<li>異なる値を試して合理的な最高速度を見つけこのPWM値を覚えるまで続けてください。</li>
+</ol>
+<p>RCカーでの後進は、ESCが逆方向パルス、ゼロパルス、逆方向パルスを受信して​​後方に進む必要があるため、ややこしいです。リバース PWM 設定をキャリブレーションするには...</p>
+<ol>
+<li>上記と同じテクニックを使用して、PWM設定をゼロスロットルに設定します。</li>
+<li>逆の値を入力し、次にゼロスロットルの値を入力し、逆の値を再度入力します。</li>
+<li>逆の値の <code>+/-10</code> の値を入力して、妥当な逆速度を見つけます。逆 PWM 値を覚えておいてください。</li>
+</ol>
+<p><code>config.py</code> のスロットル操作部分を、キャリブレーション作業で得られたPWM値に変更します。
+<em> <code>THROTTLE_FORWARD_PWM</code> = 全速前進時のPWM値
+</em> <code>THROTTLE_STOPPED_PWM</code> = 停止時のPWM値
+* <code>THROTTLE_REVERSE_PWM</code> = 全速後進時のPWM値</p>
+<h2 id="_5">キャリブレーションの微調整</h2>
+<p><img alt="fine calibration" src="../../assets/fine_calibration.gif" /></p>
+<p>これで、だいたいの調整が終わった車ができたので、実際に運転して、期待通りに走行することを確認します。車のキャリブレーションをさらに微調整する方法は次のとおりです。</p>
+<ol>
+<li>Donkey Car上のRaspberry Piにて <code>python manage.py drive</code> を実行し運転開始状態にします。</li>
+<li>ブラウザで <code>&lt;Donkey CarのIPアドレス&gt;:8887</code> を開きます。</li>
+<li>車の操舵がすべて正しい方向になるまで <code>j</code> キーを押します。</li>
+<li>車を前進させるために数回 <code>i</code> キーを押す。</li>
+<li>ターンの直径をメジャーで測定し、スプレッドシートに記録します。</li>
+<li>反対の方向にも同様の測定を行います。</li>
+<li>車がどちらの方向に同じ操舵ができているかを確認します。</li>
+</ol>
+<p>修正例
+<em> 80％ターンと100％ターンで同じ直径になったら、そのターン方向のPWM設定を80％のPWM値に変更します。
+</em> 片方向に偏りが生じている場合、偏っていない方向側のステアリングPWM値を変更します。</p>
+<p>微調整後、ステアリングチャートは次のようになるはずです。</p>
+<p><img alt="calibration graph" src="../../assets/calibration_graph.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../get_driving/" title="Get driving." class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                Get driving.
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../train_autopilot/" title="Train an autopilot." class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                Train an autopilot.
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

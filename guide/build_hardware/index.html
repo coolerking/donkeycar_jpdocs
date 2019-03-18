@@ -1,0 +1,1305 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Build a car. - Donkey Car</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#donkey-v2" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Donkey Car" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Donkey Car
+            </span>
+            <span class="md-header-nav__topic">
+              Build a car.
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Donkey Car" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Donkey Car
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Build a car.
+      </label>
+    
+    <a href="./" title="Build a car." class="md-nav__link md-nav__link--active">
+      Build a car.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="概要" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="車両の選択" class="md-nav__link">
+    車両の選択
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="独自車両の組み立て" class="md-nav__link">
+    独自車両の組み立て
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="必要となる部品:" class="md-nav__link">
+    必要となる部品:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-donkey" title="Option 1: 公式Donkeyストアからの購入" class="md-nav__link">
+    Option 1: 公式Donkeyストアからの購入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2" title="Option 2:ボトムアップビルド" class="md-nav__link">
+    Option 2:ボトムアップビルド
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="オプションとなるアップグレード" class="md-nav__link">
+    オプションとなるアップグレード
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="ハードウェア" class="md-nav__link">
+    ハードウェア
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-3d" title="Step 1: 部品の3Dプリント" class="md-nav__link">
+    Step 1: 部品の3Dプリント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" title="Step 2: 部品のクリンナップ" class="md-nav__link">
+    Step 2: 部品のクリンナップ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" title="Step 3: 天板へのロールケージ組み立て" class="md-nav__link">
+    Step 3: 天板へのロールケージ組み立て
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-raspberry-pi" title="Step 4: Raspberry Piへサーボシールド接続" class="md-nav__link">
+    Step 4: Raspberry Piへサーボシールド接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-raspberry-pi-3d" title="Step 5: Raspberry Pi を 3D プリント済み天板に組み付け" class="md-nav__link">
+    Step 5: Raspberry Pi を 3D プリント済み天板に組み付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" title="Step 6: カメラの組み付け" class="md-nav__link">
+    Step 6: カメラの組み付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7" title="Step 7: のこりの組み立て" class="md-nav__link">
+    Step 7: のこりの組み立て
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7b-desert-monster" title="Step 7b: アダプタ部品の接続（Desert Monsterのみ）" class="md-nav__link">
+    Step 7b: アダプタ部品の接続（Desert Monsterのみ）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="ソフトウェア" class="md-nav__link">
+    ソフトウェア
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install_software/" title="Install the software" class="md-nav__link">
+      Install the software
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../get_driving/" title="Get driving." class="md-nav__link">
+      Get driving.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../calibrate/" title="Calibrate steering and throttle." class="md-nav__link">
+      Calibrate steering and throttle.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../train_autopilot/" title="Train an autopilot." class="md-nav__link">
+      Train an autopilot.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../simulator/" title="Donkey Simulator." class="md-nav__link">
+      Donkey Simulator.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Parts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Parts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/actuators/" title="Actuators" class="md-nav__link">
+      Actuators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/controllers/" title="Controllers" class="md-nav__link">
+      Controllers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/stores/" title="Stores" class="md-nav__link">
+      Stores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/imu/" title="IMU" class="md-nav__link">
+      IMU
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Utilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utility/donkey/" title="donkey" class="md-nav__link">
+      donkey
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      References
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stable-baselines/blog/" title="stable-baselines" class="md-nav__link">
+      stable-baselines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sixaxis/" title="sixaxis" class="md-nav__link">
+      sixaxis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wii-u/" title="Wii-U" class="md-nav__link">
+      Wii-U
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../paper/Learn_to_Drive_in_a_Day.md" title="Learn to drive in a Day" class="md-nav__link">
+      Learn to drive in a Day
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release2.5.8/" title="ver2.5.8" class="md-nav__link">
+      ver2.5.8
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../supported_cars/" title="Supported Cars" class="md-nav__link">
+      Supported Cars
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../roll_your_own/" title="Roll Your Own" class="md-nav__link">
+      Roll Your Own
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contribute/" title="Contribute" class="md-nav__link">
+      Contribute
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tests/" title="Tests" class="md-nav__link">
+      Tests
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../release/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="概要" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="車両の選択" class="md-nav__link">
+    車両の選択
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="独自車両の組み立て" class="md-nav__link">
+    独自車両の組み立て
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="必要となる部品:" class="md-nav__link">
+    必要となる部品:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-donkey" title="Option 1: 公式Donkeyストアからの購入" class="md-nav__link">
+    Option 1: 公式Donkeyストアからの購入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2" title="Option 2:ボトムアップビルド" class="md-nav__link">
+    Option 2:ボトムアップビルド
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="オプションとなるアップグレード" class="md-nav__link">
+    オプションとなるアップグレード
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="ハードウェア" class="md-nav__link">
+    ハードウェア
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-3d" title="Step 1: 部品の3Dプリント" class="md-nav__link">
+    Step 1: 部品の3Dプリント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" title="Step 2: 部品のクリンナップ" class="md-nav__link">
+    Step 2: 部品のクリンナップ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" title="Step 3: 天板へのロールケージ組み立て" class="md-nav__link">
+    Step 3: 天板へのロールケージ組み立て
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-raspberry-pi" title="Step 4: Raspberry Piへサーボシールド接続" class="md-nav__link">
+    Step 4: Raspberry Piへサーボシールド接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-raspberry-pi-3d" title="Step 5: Raspberry Pi を 3D プリント済み天板に組み付け" class="md-nav__link">
+    Step 5: Raspberry Pi を 3D プリント済み天板に組み付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" title="Step 6: カメラの組み付け" class="md-nav__link">
+    Step 6: カメラの組み付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7" title="Step 7: のこりの組み立て" class="md-nav__link">
+    Step 7: のこりの組み立て
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7b-desert-monster" title="Step 7b: アダプタ部品の接続（Desert Monsterのみ）" class="md-nav__link">
+    Step 7b: アダプタ部品の接続（Desert Monsterのみ）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="ソフトウェア" class="md-nav__link">
+    ソフトウェア
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/coolerking/edit/master/docs/guide/build_hardware.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="donkey-v2">Donkey V2 の作り方</h1>
+<p>&nbsp;</p>
+<ul>
+<li><a href="./#overview">概要</a></li>
+<li><a href="./#parts-needed">必要となる部品</a></li>
+<li><a href="./#hardware">ハードウェア:</a><ul>
+<li><a href="./#step-1-print-parts">Step1: 部品の#Dプリント</a></li>
+<li><a href="./#step-2-clean-up-parts">Step 2: 部品のクリンナップ</a></li>
+<li><a href="./#step-3-assemble-top-plate-and-roll-cage">Step 3: 天板およびロールケージの組み立て</a></li>
+<li><a href="./#step-4-connect-servo-shield-to-raspberry-pi">Step 4: Raspberry Pi へサーボシールド接続</a></li>
+<li><a href="./#step-5-attach-raspberry-pi-to-3d-printed-bottom-plate">Step 5: 天板にRaspberry Pi を組み付け</a></li>
+<li><a href="./#step-6-attach-camera">Step 6: カメラの組み付け</a></li>
+<li><a href="./#step-7-put-it-all-together">Step 7: 残りの組み立て</a></li>
+</ul>
+</li>
+<li><a href="../install_software/">ソフトウェア</a></li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="_1">概要</h2>
+<p>これらは、2017年発行の <a href="(https://makezine.com/projects/build-autonomous-rc-car-raspberry-pi/)">雑誌「Make:」 </a> に掲載された記事から更新された手順ガイド です。ソフトウェアインストール手順の最新バージョンは、ソフトウェアの説明のセクションで管理されています。あなたの車を組み立てた後は、必ずその指示に従ってください。</p>
+<h2 id="_2">車両の選択</h2>
+<p>完全サポートされている車両として、「Exceed」ブランドで市販されている4つのシャーシがあります： </p>
+<ul>
+<li>Exceed Magnet <a href="https://www.amazon.com/gp/product/9269803775/?tag=donkeycar-20">Blue</a>, <a href="http://amzn.to/2EIC1CF">Red</a></li>
+<li>Exceed Desert Monster <a href="http://amzn.to/2HLXJmc">Blue</a>,  <a href="http://amzn.to/2pnIitV">Red</a></li>
+<li>Exceed Short Course Truck  <a href="https://amzn.to/2KsYF1e">Blue</a>,  <a href="https://amzn.to/2rdtQ8z">Red</a></li>
+<li>Exceed Blaze <a href="https://amzn.to/2rf4MgS">Hyper Blue</a>, <a href="https://amzn.to/2jlf3EA">Yellow</a></li>
+</ul>
+<p>これらの車は電気回路は同じですが、タイヤの取り付け方法などが異なります。これらのうち Desert Monster、Short Cource Truck、Blazeはさらにアダプタ(Donkey Storeから3-Dプリンタ用設計図データや出力品を購入可能)が必要であることに注意してください。上記の車種は、ほとんどがプラグアンドプレイであるため、標準の車両としています。いずれもトレーニングを容易にするブラシ付きモーターを備えており、粗い路面をうまく扱い、そして安価です。</p>
+<p><a href="https://youtu.be/UucnCmCAGTI">この動画</a> では、いくつかの車種について概要や組み立て方法を紹介しています。</p>
+<p>さらに、"Donkey Pro"の名前で3台の車がサポートされています。 これらは 1/10 スケールの車で、上記4台より大きく、少しだけ性能が良いですが、やや高価です。 HobbyKing Trooper（プロバージョンではない）は <a href="https://hobbyking.com/en_us/turnigy-trooper-sct-4x4-1-10-brushless-short-course-truck-arr.html?___store=en_us">ここ</a> にあります。HobbyKing Mission-Dは <a href="https://hobbyking.com/en_us/1-10-hobbykingr-mission-d-4wd-gtr-drift-car-arr.html">ここ</a> にあります。
+Tamaya TT01やそのクローン車は世界中で見つけることができますが、通常はキットとして構築します。 他の2台の車はDonkey Carにする準備ができていますが、組み立てるのは難しいです。</p>
+<p>ここには、さまざまなモデルを紹介している <a href="https://youtu.be/K-REL9aqPE0">ビデオ</a> があります。 Donkey Proのモデルはまだよく記述していませんので、あらかじめ警告しておきます。</p>
+<p>：詳細やその他の車種については、 <a href="/supported_cars.md">サポート対象車リンク</a> を参照してください。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/donkey.PNG" /></p>
+<p>&nbsp;</p>
+<h2 id="_3">独自車両の組み立て</h2>
+<p>RCについての経験をもち、Donkey が標準としてサポートしていない車両で製作したい場合は、もちろん自分で独自車両を組み立てることができます。その際に一助となるクイックリファレンスがあります。  <a href="/roll_your_own.md">独自車両の組み立て</a> を参照のこと。</p>
+<h2 id="_4">必要となる部品:</h2>
+<h3 id="option-1-donkey">Option 1: 公式Donkeyストアからの購入</h3>
+<p>2つの公式ストアが利用可能です：</p>
+<p>米国にいる場合は、Donkey Store を使用できます。Donkey Store の目的は、Donkey Car を作るのをより簡単により安くすることです。Donkey Store は、Donkey Car の元々の創業者によって運営され、利益は Donkey Car の開発に資金を提供するために使用されます。また Donkey Store からの部品の設計は、大量にしか入手できないか、入手が困難だがより良い部品を使用するため、標準ビルドよりも若干アップデートされていることにも注意してください。Donkey Store のビルドは、他のすべてと同様にオープンソースです。</p>
+<p>あなたがアジアにいるなら、香港の DIY Robocars コミュニティも <a href="https://www.robocarstore.com/products/donkey-car-starter-kit">DIY Robocar Store</a> でキットを販売しています。彼らは長期的な Donkey のコミュニティメンバであり、収益を使ってこのプロジェクトの研究開発活動を支援しています。香港のストアはヨーロッパや米国にも販売することができますが、コストが高くなる可能性があることに注意してください。</p>
+<blockquote>
+<p>上記の <a href="https://www.robocarstore.com/products/donkey-car-starter-kit">DIY Robocar Store</a> にて購入する場合、PayPalで4万円弱かかります。PayPalアカウントにも対応していました。2～3営業日の配送オプションつけても受け取りまで約1週間かかり、日本国内の税関料は荷物受け取り時に1500円支払いました（支払いがあるため、宅配ボックスには入れてもらえません）。Raspberry Pi本体やSDカードまで含まれているので、入手後すぐに始めることが出来ます。ただし交換用のバッテリが必要な場合、国内で入手が困難です(ミニタミヤプラグの7.2VNiMHバッテリ)。到着までに、香港BFタイプメスー日本国内オスの変換プラグ、プラスティック用ボンド(ロールケージと天板はボンドのほうが楽)の準備を推奨します。なおキット購入の場合、DCDCコンバータで１つのバッテリから給電するため、以下の表にふくまれている microUSB ケーブル付き USB バッテリは不要です。なお、このドキュメントにはありませんが、SDカードに書き込めるPCとインターネット接続可能なWiFiルータが必要です。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>部品の説明</th>
+<th>リンク</th>
+<th>参考価格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exceed Magnet, Desert Monster, Blaze, or Short Course Truck</td>
+<td>S上記リンク確認のこと</td>
+<td>~米90ドル</td>
+</tr>
+<tr>
+<td>microUSBケーブルつきUSB バッテリ (2A 5V の出力)</td>
+<td><a href="http://amzn.to/2ptshm0">Anker 6700 mAh</a></td>
+<td>米17ドル</td>
+</tr>
+<tr>
+<td>Raspberry Pi 3</td>
+<td><a href="https://www.amazon.com/gp/product/B01CD5VC92?tag=donkeycar-20">amazon.com/gp/product/B01CD5VC92</a></td>
+<td>米38ドル</td>
+</tr>
+<tr>
+<td>マイクロSD カード (どれでも動作可能、これは推奨品です)</td>
+<td><a href="https://www.amazon.com/gp/product/B01HU3Q6F2?tag=donkeycar-20">amazon.com/gp/product/B01HU3Q6F2</a></td>
+<td>米18.99ドル</td>
+</tr>
+<tr>
+<td>Donkey 3Dプリント済み部品キット</td>
+<td>[Magnet用] ](https://squareup.com/store/donkeycar/item/magnet-partial-kit) または <a href="https://squareup.com/store/donkeycar/item/desert-monster-short-course-truck-or-blaze-partial-kit">Desert Monster, SCT, Blaze 用</a></td>
+<td>米85ドル もしくは 米92ドル</td>
+</tr>
+</tbody>
+</table>
+<h3 id="option-2">Option 2:ボトムアップビルド</h3>
+<p>自分で部品を購入したい、 Donkey をカスタマイズしたい、または米国以外に在住の場合は、ボトムアップビルドを選ぶことができます。</p>
+<table>
+<thead>
+<tr>
+<th>部品の説明</th>
+<th>リンク</th>
+<th>参考価格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Magnet RCカー本体(もしくは代替品)</td>
+<td><a href="https://www.amazon.com/gp/product/9269803775/?tag=donkeycar-20">青</a>, <a href="http://amzn.to/2EIC1CF">赤</a></td>
+<td>$92</td>
+</tr>
+<tr>
+<td>M2x6 ネジ (4個)</td>
+<td><a href="https://www.mcmaster.com/#91292a831/=177k4rp">mcmaster.com/#91292a831/=177k4rp</a></td>
+<td>米6.38ドル &ast;</td>
+</tr>
+<tr>
+<td>M2.5x12 ネジ (8個)</td>
+<td><a href="https://www.mcmaster.com/#91292a016/=177k574">mcmaster.com/#91292a016/=177k574</a></td>
+<td>米4.80ドル &ast;</td>
+</tr>
+<tr>
+<td>M2.5 ナット (8個)</td>
+<td><a href="https://www.mcmaster.com/#91828a113/=177k7ex">mcmaster.com/#91828a113/=177k7ex</a></td>
+<td>米5.64ドル &ast;</td>
+</tr>
+<tr>
+<td>M2.5 ワッシャ (8個)</td>
+<td><a href="https://www.mcmaster.com/#93475a196/=177k7x6">mcmaster.com/#93475a196/=177k7x6</a></td>
+<td>米1.58ドル &ast;</td>
+</tr>
+<tr>
+<td>microUSBケーブルつきUSB バッテリ (2A 5V の出力)</td>
+<td><a href="http://amzn.to/2ptshm0">Anker 6700 mAh</a></td>
+<td>米17ドル</td>
+</tr>
+<tr>
+<td>Raspberry Pi 3</td>
+<td><a href="https://www.amazon.com/gp/product/B01CD5VC92?tag=donkeycar-20">amazon.com/gp/product/B01CD5VC92</a></td>
+<td>米38ドル</td>
+</tr>
+<tr>
+<td>マイクロSD カード(どれでも動作可能、これは推奨品です)</td>
+<td><a href="https://www.amazon.com/gp/product/B01HU3Q6F2?tag=donkeycar-20">amazon.com/gp/product/B01HU3Q6F2</a></td>
+<td>米18.99ドル</td>
+</tr>
+<tr>
+<td>ワイドアングル Raspberry Pi カメラ</td>
+<td><a href="https://www.amazon.com/gp/product/B00N1YJKFS?tag=donkeycar-20">amazon.com/gp/product/B00N1YJKFS</a></td>
+<td>米25ドル</td>
+</tr>
+<tr>
+<td>メスーメス ジャンパ線</td>
+<td><a href="https://www.amazon.com/gp/product/B010L30SE8?tag=donkeycar-20">amazon.com/gp/product/B010L30SE8</a></td>
+<td>米7ドル &ast;</td>
+</tr>
+<tr>
+<td>Servo ドライブ PCA 9685</td>
+<td><a href="https://www.amazon.com/gp/product/B014KTSMLA?tag=donkeycar-20">amazon.com/gp/product/B014KTSMLA</a></td>
+<td>米12ドル &ast;&ast;</td>
+</tr>
+<tr>
+<td>3D プリント済みロールケージおよび天板</td>
+<td>販売元: <a href="https://squareup.com/store/donkeycar">Donkey Store</a> 3Dプリンタ入力用ファイル: <a href="http://www.thingiverse.com/thing:2260575">thingiverse.com/thing:2260575</a></td>
+<td>米45ドル</td>
+</tr>
+</tbody>
+</table>
+<p>&ast; これらの製品は、Donkey Car1台に必要な量よりもはるかに多い数量となっています。あなたが友人と数台構築する場合、車の総費用は米20ドルほど安くなります。</p>
+<p>&ast;&ast; この製品は、出荷のために15～45日間待つ場合がありますが、Ali Expressであれば～2日で購入できます。（訳者注：日本国内は対象外）</p>
+<p>&nbsp;</p>
+<h3 id="_5">オプションとなるアップグレード</h3>
+<ul>
+<li><strong>LiPo バッテリおよびアクセサリ:</strong> LiPoバッテリは、エネルギ密度が大幅に向上し、より良いドロップオフ曲線を示します。以下を参照してください（Traxxasの礼儀）。</li>
+</ul>
+<blockquote>
+<p>香港のキットはNiMHバッテリが同梱されています。LoPoバッテリに変更可能ですが、ESC上のジャンパコネクタの設定を変更することを忘れないでください。</p>
+</blockquote>
+<p><img alt="donkey" src="../../assets/build_hardware/traxxas.PNG" /></p>
+<table>
+<thead>
+<tr>
+<th>部品の説明</th>
+<th>リンク</th>
+<th>参考価格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LiPo バッテリ</td>
+<td><a href="https://hobbyking.com/en_us/turnigy-1800mah-2s-20c-lipo-pack.html">hobbyking.com/en_us/turnigy-1800mah-2s-20c-lipo-pack.html</a> もしくは <a href="https://www.amazon.com/gp/product/B0072AERBE/">amazon.com/gp/product/B0072AERBE/</a></td>
+<td>米8.94ドル ~ 米17ドル</td>
+</tr>
+<tr>
+<td>Lipo 充電器 (上記バッテリを1時間でチャージ可能)</td>
+<td><a href="https://www.amazon.com/gp/product/B00XU4ZR06?tag=donkeycar-20">amazon.com/gp/product/B00XU4ZR06</a></td>
+<td>米13ドル</td>
+</tr>
+<tr>
+<td>Lipo バッテリケース (爆発時の被害を減らすため)</td>
+<td><a href="https://www.amazon.com/gp/product/B00T01LLP8?tag=donkeycar-20">amazon.com/gp/product/B00T01LLP8</a></td>
+<td>米8ドル</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2 id="_6">ハードウェア</h2>
+<p>Donkey Car ストアから部品を購入した場合は、Step 3 に進んでください。</p>
+<h3 id="step-1-3d">Step 1: 部品の3Dプリント</h3>
+<p>3Dプリンタをお持ちでない場合は、 <a href="https://squareup.com/store/donkeycar">Donkey Store</a>, <a href="https://www.shapeways.com/">Shapeways</a> または <a href="https://www.3dhubs.com/">3dHubs</a> からパーツを注文できます。私は黒プラスティック(black PLA)、高さ2mm、サポートなし、でパーツをプリントしました。上部のロールバーは、上下逆さまに印刷されるように設計されています。あなたが "Magnet"車両を持っていない限り、アダプタをプリントする必要があることを忘れないでください。</p>
+<blockquote>
+<p>日本国内でも3Dプリント代行する業者は存在します。DMM.makeでは上記リンクのファイルフォーマットそのものを送信して見積もりを取ることが出来ましたが、とても上記参考価格におさまる値段ではありませんでした。</p>
+</blockquote>
+<p>私の場合は、0.3mmレイヤ高、0.5mmのノズルをサポートなしで、黒プラスティック(black PLA)でパーツをプリントしました。。上部のロールバーは、上下逆さまに印刷されるように設計されています。</p>
+<p>&nbsp;</p>
+<h3 id="step-2">Step 2: 部品のクリンナップ</h3>
+<p>3D プリント直後の部品のほとんどすべてがクリンナップをおこなう必要があります。穴をきれいにドリルしなおして、余分なプラスチックを掃除してください。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/2a.PNG" /></p>
+<p>特に、下図に示すように、ロールバーの側面にあるスロットをきれいにしてください。 </p>
+<p><img alt="donkey" src="../../assets/build_hardware/2b.PNG" /></p>
+<p>&nbsp;</p>
+<h3 id="step-3">Step 3: 天板へのロールケージ組み立て</h3>
+<p>Exceed ショートコーストラック、ブレイズまたはデザートモンスターの場合は <a href="https://youtu.be/UucnCmCAGTI">このビデオ</a> を見てください。</p>
+<p>ロールケージの側面にあるスロットにナットを差し込みます。これは特に簡単なことではありません。穴をもう一度きれいにし、小さなドライバを使ってネジを押し込んで、ロールケージの底にある穴に合わせます。</p>
+<blockquote>
+<p>香港キット品の場合も、車体前方2箇所にこの作業が必要です。ただしこの作業は難易度が高く、香港のキットでは対応するナットが不足するため、手っ取り早くプラスチック用ボンドで固定する方法を勧めます。</p>
+</blockquote>
+<p><img alt="donkey" src="../../assets/build_hardware/3a.PNG" /></p>
+<p>ナットをスライドさせたら、底板を取り付けることができます。この作業は少し難しいかもしれません。小さなドライバを使ってナットを押して、スロット内で回転しないようにします。よいニュースがあります。この作業は決してもう一度行う必要はありません。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/3b.PNG" /></p>
+<p>&nbsp;</p>
+<h3 id="step-4-raspberry-pi">Step 4: Raspberry Piへサーボシールド接続</h3>
+<p>Raspberry Pi を底板に取り付けた後にこれを行うことができます。作業台に寝かせているときにパーツを見るのが簡単だと思います。以下のようにパーツをつなぎます。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/4a.PNG" /></p>
+<p>参考までに、下記の Raspberry Pi ピンアウトが参考になります。3.3V、2つのI2Cピン（SDAとSCL）、グランド(GND:0Vのこと)に接続していることがわかります。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/4b.PNG" /></p>
+<p>&nbsp;</p>
+<h3 id="step-5-raspberry-pi-3d">Step 5: Raspberry Pi を 3D プリント済み天板に組み付け</h3>
+<p>始める前に、フラッシュ済みのSDカードを挿入し、電子機器のベンチをテストしておくとよいでしょう。それが完了したら、Raspberry Pi とサーボの取り付けは、ボードを通ってトッププレートのネジボスにネジを通すのと同じくらい簡単です。M2.5x12mmのネジは、ボード、プラスチックを通すのに最適な長さでなければならず、ワッシャのためのスペースがあります。ネジの「キャップ」部分が上を向くようにし、ナットを天板の下に置いてください。イーサネットポートとUSBポートは前方を向いている必要があります。これはSDカードへのアクセスを提供し、カメラリボンケーブルを適切に整列させるので重要です。</p>
+<p>ケーブル帯またはベルクロを使用して、USBバッテリをプリントされた底板の下面に取り付けます。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/5ab.PNG" /></p>
+<p>&nbsp;</p>
+<h3 id="step-6">Step 6: カメラの組み付け</h3>
+<p>Donkey シャーシには2つのバージョンがあり、新しいロールゲージにはネジがありません(キットには木ねじが2個用意されている)。古いロールゲージにはネジで組み付けます。このため、両方の手順について、それぞれ説明します。</p>
+<p><strong>ねじが必要ではない設計</strong>
+新しいデザインはかなりシンプルです。ケーブルをスロットの先に滑らせてください。ただし、カメラのレンズを押さえずに、ボードを押さないように注意してください。
+<img alt="donkey" src="../../assets/build_hardware/assemble_camera.jpg" /></p>
+<p>カメラを取り外す必要がある場合、レンズを押す誘惑の代わりにこれらの写真に示されているようにコネクタを押してください。
+<img alt="donkey" src="../../assets/build_hardware/Remove--good.jpg" /> <img alt="donkey" src="../../assets/build_hardware/Remove--bad.jpg" /></p>
+<p><strong>ねじが必要な設計</strong></p>
+<p>カメラを取り付けるのはちょっと難しいですが、M2ネジはプラスチックにねじ込むことができます。私は1.5mmのビット（インペリアルランドの1/16ビット）で穴を開けることをお勧めします。その後、カメラを設置する前にねじであらかじめ通しておいてください。2本のネジを入れるだけです。</p>
+<blockquote>
+<p>上側のネジ穴を使用すると、短くなることがあります。下の2つの穴にねじを入れます。</p>
+</blockquote>
+<p>車を使用する前に、カメラのレンズからプラスチックフィルムを取りはずしてください。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/6a.PNG" /></p>
+<p>カメラのケーブルを間違った向きに置くのは簡単ですので、これらの写真を見て、ケーブルが正しく取り付けられていることを確認してください。慣れていない場合は、チュートリアルが参考になるでしょう。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/6b.PNG" /></p>
+<p>&nbsp;</p>
+<h3 id="step-7">Step 7: のこりの組み立て</h3>
+<p><strong>Desert Monster Chassis を持っている場合、下の7Bセクションを参照してください</strong>
+最後の手順は簡単です。まずロールバー組み付け済みの天板を車に取り付けます。これは、車両に付属のピンを使います。
+<img alt="donkey" src="../../assets/build_hardware/7a.PNG" /></p>
+<p>次に(ESCからのびているスロットルと、前輪サーボからのびているステアリングの)2組のサーボケーブルを天板の穴をとおします。スロットルケーブルはサーボコントローラのチャネル0に接続し、ステアリングはチャネル1に接続します。 </p>
+<p><img alt="donkey" src="../../assets/build_hardware/7b.PNG" /></p>
+<p>これでハードウェアが完成しました！ </p>
+<blockquote>
+<p>香港のキット品の場合、DCDCコンバータの組付けが終わっていません。まずDCDCコンバータを天板に組み付け、USBケーブルでRaspberry Piとmicro-Bコネクタへ接続します。Raspberry PiはUSB給電させるようになっています。次に同梱の二股ミニタミヤコネクタケーブルの黒赤むきだしのケーブル側をDCDCコンバータへ接続します。そしてESCとつながっている電源スイッチがOFFになっていることを確認し、ESCとこの二股ケーブルを接続します。同梱の充電器とBF変換コネクタで充電したバッテリを車体に組み付け、ピンで止めます。バッテリ側の電源を二股の元側とつなぐと、ESC側のスイッチがオフになっていてもRaspberry Piが起動してしまうので、実際に動かすまでこのコネクタは外しておきます。ジャンパ線側の接続は、｛Pi:PCA9685}=紫{3.3V:VCC},灰{GPIO2:SDA},白(黃){GPIO1:SCL},黒{GND:GND}でつなぎます。</p>
+</blockquote>
+<h3 id="step-7b-desert-monster">Step 7b: アダプタ部品の接続（Desert Monsterのみ）</h3>
+<p>Desert monster は、ボディを車に保持するための同じセットアップを持っていないため、2つのアダプタ部品が必要です。アダプタ部品を取り付けるには、まず、車両側シャーシから既存のアダプタ部品を取り外し、この写真に示されているのと同じネジで3Dプリント済みアダプタ部品をねじ込む必要があります。</p>
+<p><img alt="adapter" src="../../assets/build_hardware/Desert_Monster_adapter.png" /></p>
+<p>この作業が終わったら Step 7に戻ります。</p>
+<p>&nbsp;</p>
+<h2 id="_7">ソフトウェア</h2>
+<p>おめでとう！今すぐあなたの車を動かすためには、 <a href="../install_software/">ソフトウェアについて説明しているセクション</a> を参照してください。</p>
+<p><img alt="donkey" src="../../assets/build_hardware/donkey2.PNG" /></p>
+<blockquote>
+<p>上記のいくつかのリンク元は、アフィリエイト広告プログラムであるAmazon Services LLC Associates Programに参加して、我々（訳者注：Donkey創設者たちのこと）がAmazon.comや提携サイトから手数料を得るよう組み込まれています。</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../install_software/" title="Install the software" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                Install the software
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

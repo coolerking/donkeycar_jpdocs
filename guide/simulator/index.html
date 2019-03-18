@@ -1,0 +1,1239 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Donkey Simulator. - Donkey Car</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#donkey-simulator" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Donkey Car" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Donkey Car
+            </span>
+            <span class="md-header-nav__topic">
+              Donkey Simulator.
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Donkey Car" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Donkey Car
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/coolerking/" title="リポジトリへ" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_hardware/" title="Build a car." class="md-nav__link">
+      Build a car.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../install_software/" title="Install the software" class="md-nav__link">
+      Install the software
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../get_driving/" title="Get driving." class="md-nav__link">
+      Get driving.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../calibrate/" title="Calibrate steering and throttle." class="md-nav__link">
+      Calibrate steering and throttle.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../train_autopilot/" title="Train an autopilot." class="md-nav__link">
+      Train an autopilot.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Donkey Simulator.
+      </label>
+    
+    <a href="./" title="Donkey Simulator." class="md-nav__link md-nav__link--active">
+      Donkey Simulator.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulator" title="Simulator のダウンロード" class="md-nav__link">
+    Simulator のダウンロード
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac" title="Mac の場合 追加ステップ" class="md-nav__link">
+    Mac の場合 追加ステップ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="記録データ" class="md-nav__link">
+    記録データ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-road" title="Generated Road シーン" class="md-nav__link">
+    Generated Road シーン
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warehouse" title="Warehouse シーン" class="md-nav__link">
+    Warehouse シーン
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="メニュー オプション:" class="md-nav__link">
+    メニュー オプション:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joystickkeyboard-no-rec" title="Joystick/Keyboard No Rec" class="md-nav__link">
+    Joystick/Keyboard No Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joystickkeyboard-w-rec" title="Joystick/Keyboard w Rec" class="md-nav__link">
+    Joystick/Keyboard w Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-drive-no-rec" title="Auto Drive No Rec" class="md-nav__link">
+    Auto Drive No Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-drive-w-rec" title="Auto Drive w Rec" class="md-nav__link">
+    Auto Drive w Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-track" title="Next Track" class="md-nav__link">
+    Next Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regen-track" title="Regen Track" class="md-nav__link">
+    Regen Track
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pid" title="PID コントロール" class="md-nav__link">
+    PID コントロール
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max-speed" title="Max Speed" class="md-nav__link">
+    Max Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prop" title="Prop" class="md-nav__link">
+    Prop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diff" title="Diff" class="md-nav__link">
+    Diff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-steering" title="Max Steering" class="md-nav__link">
+    Max Steering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="一般的な利用方法" class="md-nav__link">
+    一般的な利用方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="ジョイスティック セットアップ" class="md-nav__link">
+    ジョイスティック セットアップ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux におけるジョイスティック セットアップ" class="md-nav__link">
+    Linux におけるジョイスティック セットアップ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Parts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Parts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/actuators/" title="Actuators" class="md-nav__link">
+      Actuators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/controllers/" title="Controllers" class="md-nav__link">
+      Controllers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/stores/" title="Stores" class="md-nav__link">
+      Stores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parts/imu/" title="IMU" class="md-nav__link">
+      IMU
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Utilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utility/donkey/" title="donkey" class="md-nav__link">
+      donkey
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      References
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../stable-baselines/blog/" title="stable-baselines" class="md-nav__link">
+      stable-baselines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sixaxis/" title="sixaxis" class="md-nav__link">
+      sixaxis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wii-u/" title="Wii-U" class="md-nav__link">
+      Wii-U
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../paper/Learn_to_Drive_in_a_Day.md" title="Learn to drive in a Day" class="md-nav__link">
+      Learn to drive in a Day
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release2.5.8/" title="ver2.5.8" class="md-nav__link">
+      ver2.5.8
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../supported_cars/" title="Supported Cars" class="md-nav__link">
+      Supported Cars
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../roll_your_own/" title="Roll Your Own" class="md-nav__link">
+      Roll Your Own
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contribute/" title="Contribute" class="md-nav__link">
+      Contribute
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tests/" title="Tests" class="md-nav__link">
+      Tests
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../release/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simulator" title="Simulator のダウンロード" class="md-nav__link">
+    Simulator のダウンロード
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac" title="Mac の場合 追加ステップ" class="md-nav__link">
+    Mac の場合 追加ステップ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="記録データ" class="md-nav__link">
+    記録データ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-road" title="Generated Road シーン" class="md-nav__link">
+    Generated Road シーン
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warehouse" title="Warehouse シーン" class="md-nav__link">
+    Warehouse シーン
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="メニュー オプション:" class="md-nav__link">
+    メニュー オプション:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joystickkeyboard-no-rec" title="Joystick/Keyboard No Rec" class="md-nav__link">
+    Joystick/Keyboard No Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joystickkeyboard-w-rec" title="Joystick/Keyboard w Rec" class="md-nav__link">
+    Joystick/Keyboard w Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-drive-no-rec" title="Auto Drive No Rec" class="md-nav__link">
+    Auto Drive No Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-drive-w-rec" title="Auto Drive w Rec" class="md-nav__link">
+    Auto Drive w Rec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-track" title="Next Track" class="md-nav__link">
+    Next Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regen-track" title="Regen Track" class="md-nav__link">
+    Regen Track
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pid" title="PID コントロール" class="md-nav__link">
+    PID コントロール
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max-speed" title="Max Speed" class="md-nav__link">
+    Max Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prop" title="Prop" class="md-nav__link">
+    Prop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diff" title="Diff" class="md-nav__link">
+    Diff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-steering" title="Max Steering" class="md-nav__link">
+    Max Steering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="一般的な利用方法" class="md-nav__link">
+    一般的な利用方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="ジョイスティック セットアップ" class="md-nav__link">
+    ジョイスティック セットアップ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux におけるジョイスティック セットアップ" class="md-nav__link">
+    Linux におけるジョイスティック セットアップ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/coolerking/edit/master/docs/guide/simulator.md" title="編集" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="donkey-simulator">Donkey Simulator</h1>
+<p>シミュレータ上で(手動)運転したDonkey Carデータをトレーニングすることができます。このシミュレータはUnityゲームプラットフォームの物理エンジンやグラフィックを使って構築されました。そしてdonkey python プロセスと接続し、独自の訓練済みモデルを使ってシュミレートされた Donkey Carを自動運転にかける事ができます。</p>
+<h3 id="simulator">Simulator のダウンロード</h3>
+<p>プラットフォーム別にダウンロード先が異なります：</p>
+<ul>
+<li>Ubuntu 16.04 <a href="https://drive.google.com/open?id=0BxSsaxmEV-5Yc3VVdVQ4UUZOc0k">ダウンロード</a></li>
+<li>Mac 10.10.5+ <a href="https://drive.google.com/open?id=0BxSsaxmEV-5YRnFEZmpRaks5NXM">ダウンロード</a></li>
+<li>Windows 7+ <a href="https://drive.google.com/open?id=0BxSsaxmEV-5YRC1ZWHZ4Y1dZTkE">ダウンロード</a></li>
+</ul>
+<p>ダウンロードした圧縮ファイルを展開すると、実行可能ファイルを含むフォルダが作成されます。その実行可能ファイルをダブルクリックして、 Simulator を起動します。</p>
+<h4 id="mac">Mac の場合 追加ステップ</h4>
+<p>ログが生成されていない場合は、信頼できないアプリケーションをサンドボックス化するOS Xのバージョンが動作している可能性があります。これにより、Simulatorがディスクに書き込めなくなります。解決するには、アプリケーションフォルダ内の実行可能ファイルを移動します。</p>
+<h3 id="_1">記録データ</h3>
+<p>このシミュレータは Donkey データを donkey tub 形式で作成できます。これは実行可能ファイルの横にあるフォルダのルートにある <code>log</code> ディレクトリに格納されます。Mac では、このフォルダを参照するためにパッケージの内容を参照する必要があります。このフォルダがない場合、データは記録されません。</p>
+<p>Simulator では、2つのシーンを提供しています。</p>
+<h2 id="generated-road">Generated Road シーン</h2>
+<p>道路をランダムに作成します。生成するごとに異なる路面を提供し、コースは数マイルのカーブをふくむ非周回コースとなります。1つのコースで訓練をして、同様のものや全く異なる路面でテストが可能です。</p>
+<h2 id="warehouse">Warehouse シーン</h2>
+<p>これは、Oakland DIYRobocars Meetup のプライマリトラックとして使用されている実際のコースと少し似ている特定のトラックを作成します。</p>
+<hr />
+<h3 id="_2">メニュー オプション:</h3>
+<h5 id="joystickkeyboard-no-rec">Joystick/Keyboard No Rec</h5>
+<p>ジョイスティックやキーボードでDonkeyを動かします。私はPS2ジョイスティックとPS3ジョイスティックを使用しました。キーボードコントロールは矢印キーで操作します。このモードでは、データは記録されません。</p>
+<p>Drive the donkey with a joystick or keyboard. I used a PS2 Joystick and a PS3 Joystick. Keyboard controls use arrow keys to steer. In this mode, no data is recorded.</p>
+<blockquote>
+<p>注意：キーボードを使う場合、ステアリング情報を段階状(例：-1, 0, 1)に生成するため、トレーニングデータとしては難しいデータになる可能性があります。ジョイスティックのセットアップ手順を確認してください。</p>
+</blockquote>
+<h5 id="joystickkeyboard-w-rec">Joystick/Keyboard w Rec</h5>
+<p>Donkey Car をジョイスティックやキーボードで動かします。このオプションでは tub donkey フォーマットとしてデータを保存します。</p>
+<h5 id="auto-drive-no-rec">Auto Drive No Rec</h5>
+<p>道路情報を使ってDonkey Carをコースにしたがってガイドします。ステアリング操作のためにPIDコントローラを使うため、時々振動(左右にブルブル動かす)します。このオプションでは走行データを記録しません。</p>
+<h5 id="auto-drive-w-rec">Auto Drive w Rec</h5>
+<p>道路情報を使ってDonkey Carをコースにしたがってガイドします。ステアリング操作のためにPIDコントローラを使うため、時々振動(左右にブルブル動かす)します。このオプションでは走行データをtub donkey フォーマットで記録します。</p>
+<h5 id="next-track">Next Track</h5>
+<p>Generated road scene の場合、路面やトラック幅が切り替わります。</p>
+<h5 id="regen-track">Regen Track</h5>
+<p>Use the current surface type, but generate a new random path and road.
+現在の路面タイプを継続して使用しますが、新しくランダムに道路コースが生成されます。</p>
+<hr />
+<h2 id="pid">PID コントロール</h2>
+<h5 id="max-speed">Max Speed</h5>
+<p>This setting determines the target speed during the PID auto drive. It will also affect the speed when driving by keyboard controls (not recommended).
+PID 自動運転中のターゲットスピードを定義します。キーボードによる運転時の速度に影響します(非推奨)。</p>
+<h5 id="prop">Prop</h5>
+<p>Propotation (比例) の略です。偏差に比例してステアリングを経路に合わそうとするPIDのPにあたります。</p>
+<h5 id="diff">Diff</h5>
+<p>PIDのDにあたり、脱輪を引き起こすような進路をステアリング操作で制限し、行き過ぎを制限するように設計されています。</p>
+<h5 id="max-steering">Max Steering</h5>
+<blockquote>
+<p>注意 - Max Steering は重要な補正で、分類トレーニングに非常に強く影響します。ステアリングデータが書き込み時に正規化され、Pythonから来た後に乗算されるので、舵角はトレーニングとシミュレーションで一定でなくてはなりません。この値を変更する場合は注意してください。Max Steering 設定ごとにデータとモデルを分離します。</p>
+</blockquote>
+<p><code>Max Steering</code> は、 <code>Auto Drive No Rec</code> 使用時にのみ調整できます。また、ジョイスティックとキーボードの操作範囲にも影響しますので、保存して再ロードする必要があります。</p>
+<p>デフォルトのカテゴリカルモデルは 16 個のbin(バイナリ：0か1)、もしくは 16分類を保持しており、最大ステアリングが <code>+-16</code> 、各binが角度の2度を表現しています。トレーニングとサンプルデータを比較して、いかにデータフィットさせるかについて知ることは有用です。</p>
+<hr />
+<h2 id="_3">一般的な利用方法</h2>
+<ul>
+<li>シミュレータを開始します</li>
+<li><code>log</code> ディレクトリが存在し、かつ中身が空であることを確認します</li>
+<li>シーンを選択します</li>
+<li><code>Auto Drive w Rec</code> ボタンを押します</li>
+<li>Max Speed、Prop、Diffそれぞれのスライダーを変更して、運転スタイルを調整します</li>
+<li>データが 10KB以上貯まるまで、10から15分ほど待機します</li>
+<li><code>Stop</code> ボタンを押します</li>
+<li><code>Exit</code> ボタンを押します</li>
+<li><code>log</code> ディレクトリを <code>~/mycar/data/</code> ディレクトリ(通常データを配置する場所)へ移動し、 <code>~/mycar/data/log</code> を作成します。</li>
+<li>いつもどおり、トレーニングを実行します。</li>
+</ul>
+<blockquote>
+<p>Note: I had problems w default categorical model. Linear model worked better for me.</p>
+<p>注意：デフォルトのカテゴリカルモデルを使用するとうまくいきません。私が試した際には、線形モデルのほうが良い動作をしました。</p>
+</blockquote>
+<pre><code class="bash">python manage.py train --tub=data/log --model=models/mypilot
+</code></pre>
+
+<ul>
+<li>Simulator サーバの開始</li>
+</ul>
+<pre><code class="bash">donkey sim --model=models/mypilot
+</code></pre>
+
+<p><code>wsgi starting up on http://0.0.0.0:9090</code> と表示されるまで待機します。</p>
+<ul>
+<li>Simulator 上でシーンを選択します</li>
+<li><code>NN Steering w Websockets</code> ボタンを押します</li>
+<li>Donkey Car が自動運転を開始します。画面左上のステアリング値、スロットル値を確認しましょう。</li>
+</ul>
+<hr />
+<h2 id="_4">ジョイスティック セットアップ</h2>
+<p>キーボード入力は学習信号としては不十分です。ジョイスティックを使用して手動の運転データを提供することをお勧めします。</p>
+<h5 id="linux">Linux におけるジョイスティック セットアップ</h5>
+<p>Unity on Linux は、SDLライブラリを使用してジョイスティックを表示します。そして、特にGamePad APIですが、デフォルトでは設定されていません。使用するには次の手順を行う必要があります：</p>
+<pre><code class="bash">git clone https://github.com/Grumbel/sdl-jstest
+
+sudo apt-get install cmake
+sudo apt-get install libsdl1.2-dev
+sudo apt-get install libsdl2-dev
+sudo apt-get install libncurses5-dev
+cd sdl-jstest
+mkdir build
+cd build
+cmake ..
+make install
+
+
+./sdl2-jstest -l
+</code></pre>
+
+<p><code>Joystick GUID: 030000004f04000008b1000000010000</code> を探します。</p>
+<p>GUID は、デバイスにより異なります。</p>
+<p>[https://github.com/gabomdq/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt] を開きます。</p>
+<p>そしてLinux の商のGUIDを探します。1行1デバイスタイプです。デバイス情報を特定するために <code>environment</code> を更新します：</p>
+<pre><code class="bash">sudo -H gedit /etc/environment
+</code></pre>
+
+<p><code>SDL_GAMECONTROLLERCONFIG=</code> 行を追加して、開始時と終了時に必ず引用符を追加してください。すなわち、</p>
+<p><code>SDL_GAMECONTROLLERCONFIG="030000004f04000008b1000000010000, ...</code> (以降の長い行は <code>gamecontrollerdb.txt</code> からコピー)</p>
+<ul>
+<li>リブートします</li>
+<li><code>sim</code> を開始します</li>
+<li><code>drive w joystick</code> を選択します</li>
+<li>ジョイスティックを操作します</li>
+<li>ハッピーダンスを踊ります</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../train_autopilot/" title="Train an autopilot." class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                Train an autopilot.
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../parts/about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                About
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
